@@ -61,7 +61,7 @@ class Reviews(models.Model):
 
 
 class ProductImage(models.Model):
-    productimage_id = models.UUIDField(
+    product_image_id = models.UUIDField(
         primary_key=True, editable=False, db_index=True, default=uuid.uuid4)
     product_id = models.ForeignKey(
         Product, on_delete=models.CASCADE, related_name='product_images')

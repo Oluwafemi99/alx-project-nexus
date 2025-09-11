@@ -33,7 +33,7 @@ SECRET_KEY = env("SECRET_KEY", default="unsafe-secret-key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bac8eba93cb9.ngrok-free.app']
 
 
 # Application definition
@@ -182,3 +182,7 @@ CHAPA_SECRET = env("CHAPA_SECRET_KEY")
 CHAPA_API_URL = 'https://api.chapa.co'
 CHAPA_API_VERSION = 'v1'
 CHAPA_TRANSACTION_MODEL = 'product_api.Transaction'
+
+
+CHAPA_WEBHOOK_URL = env("CHAPA_WEBHOOK_URL")
+CHAPA_RETURN_URL = "https://a12097a9f565.ngrok-free.app/payment-success/"

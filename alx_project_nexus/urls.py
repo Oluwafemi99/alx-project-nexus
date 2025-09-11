@@ -20,4 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('chapa-webhook/', include('django_chapa.urls')),
+    path('api/', include('product_api.urls')),
 ]

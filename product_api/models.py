@@ -66,3 +66,56 @@ class ProductImage(models.Model):
     product_id = models.ForeignKey(
         Product, on_delete=models.CASCADE, related_name='product_images')
     image = models.ImageField(upload_to='product_images/')
+
+
+class Wishlist(models.Model):
+    wishlist_id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False, db_index=True)
+    user = models.ForeignKey(
+        Users, on_delete=models.CASCADE, related_name='wishlist')
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name='wishlisted_by')
+    added_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('user', 'product')  # Prevent duplicates
+
+    def __str__(self):
+        return f"{self.user.username} → {self.product.name}"
+
+
+class Reservation(models.Model):
+    reservation_id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False, db_index=True)
+    user = models.ForeignKey(
+        Users, on_delete=models.CASCADE, related_name='reservations')
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name='reservations')
+    quantity = models.PositiveIntegerField()
+    reserved_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.username} reserved {self.quantity} of {self.product.name}"
+
+
+class Transaction(models.Model):
+    tx_ref = models.CharField(max_length=100, unique=True)
+    user = models.ForeignKey(Users, on_delete=models.CASCADE)
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    status = models.CharField(max_length=20)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+
+class Order(models.Model):
+    order_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(Users, on_delete=models.CASCADE, related_name='orders')
+    tx_ref = models.CharField(max_length=100, unique=True)
+    total_amount = models.DecimalField(max_digits=10, decimal_places=2)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+
+class OrderItem(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    quantity = models.PositiveIntegerField(default=1)

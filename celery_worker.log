@@ -125,3 +125,42 @@ setting. In Celery 5.1 it is set to False by default. The setting will be set to
 [2025-09-13 18:01:26,524: INFO/MainProcess] Connected to amqps://qzibflvl:**@possum.lmq.cloudamqp.com:5671/qzibflvl
 [2025-09-13 18:01:32,861: INFO/MainProcess] mingle: searching for neighbors
 [2025-09-13 18:01:37,820: INFO/MainProcess] mingle: all alone
+[2025-09-13 18:08:34,323: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 341, in start
+    blueprint.start(self)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py", line 772, in start
+    c.loop(*c.loop_args())
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/celery/worker/loops.py", line 97, in asynloop
+    next(loop)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/asynchronous/hub.py", line 373, in create_loop
+    cb(*cbargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/transport/base.py", line 248, in on_readable
+    reader(loop)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/transport/base.py", line 230, in _read
+    drain_events(timeout=0)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/amqp/connection.py", line 526, in drain_events
+    while not self.blocking_read(timeout):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/amqp/connection.py", line 531, in blocking_read
+    frame = self.transport.read_frame()
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/amqp/transport.py", line 297, in read_frame
+    frame_header = read(7, True)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/amqp/transport.py", line 587, in _read
+    raise OSError('Server unexpectedly closed connection')
+OSError: Server unexpectedly closed connection
+[2025-09-13 18:08:34,332: WARNING/MainProcess] /Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/celery/worker/consumer/consumer.py:392: CPendingDeprecationWarning: 
+In Celery 5.1 we introduced an optional breaking change which
+on connection loss cancels all currently executed tasks with late acknowledgement enabled.
+These tasks cannot be acknowledged as the connection is gone, and the tasks are automatically redelivered
+back to the queue. You can enable this behavior using the worker_cancel_long_running_tasks_on_connection_loss
+setting. In Celery 5.1 it is set to False by default. The setting will be set to True by default in Celery 6.0.
+
+  warnings.warn(CANCEL_TASKS_BY_DEFAULT, CPendingDeprecationWarning)
+
+[2025-09-13 18:08:36,615: INFO/MainProcess] Connected to amqps://qzibflvl:**@possum.lmq.cloudamqp.com:5671/qzibflvl
+[2025-09-13 18:08:40,820: INFO/MainProcess] mingle: searching for neighbors
+[2025-09-13 18:08:44,393: INFO/MainProcess] mingle: all alone
+
+worker: Warm shutdown (MainProcess)

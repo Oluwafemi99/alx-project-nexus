@@ -15,6 +15,7 @@ import environ
 import os
 from datetime import timedelta
 import ssl
+from celery.schedules import crontab
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,7 +34,7 @@ SECRET_KEY = env("SECRET_KEY", default="unsafe-secret-key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bac8eba93cb9.ngrok-free.app']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0911b83c8cae.ngrok-free.app']
 
 
 # Application definition
@@ -46,11 +47,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'product_api',
     'rest_framework_simplejwt.token_blacklist',
     'django_filters',
     'django_celery_results',
     'django_chapa',
+    'django_redis',
+    'django_ratelimit',
+    "product_api.apps.ProductApiConfig",
 ]
 
 MIDDLEWARE = [
@@ -61,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'product_api.middleware.RequestLoggingMiddleware',
 ]
 
 ROOT_URLCONF = 'alx_project_nexus.urls'
@@ -172,17 +176,90 @@ CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
 
-CELERY_BROKER_URL = 'amqps://qzibflvl:yourpassword@possum.lmq.cloudamqp.com/qzibflvl'
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
 
 CELERY_BROKER_USE_SSL = {
     'cert_reqs': ssl.CERT_NONE  # disables certificate verification (not recommended for production)
 }
 
+
+CELERY_BEAT_SCHEDULE = {
+    'flag-suspicious-ips-hourly': {
+        'task': 'product_api.tasks.flag_suspicious_ips',
+        'schedule': crontab(minute=0, hour='*'),  # Every hour
+    },
+    'save-daily-sales': {
+        'task': 'product_api.tasks.save_daily_sales_task',
+        'schedule': crontab(minute=0, hour=0),  # runs at midnight
+    },
+}
+
+
 CHAPA_SECRET = env("CHAPA_SECRET_KEY")
-CHAPA_API_URL = 'https://api.chapa.co'
 CHAPA_API_VERSION = 'v1'
 CHAPA_TRANSACTION_MODEL = 'product_api.Transaction'
+CHAPA_RETURN_URL = "https://0911b83c8cae.ngrok-free.app/payment/success/"
+CHAPA_WEBHOOK_URL = "https://0911b83c8cae.ngrok-free.app/api/payment/webhook/"
+CHAPA_API_URL = "https://api.chapa.co"
 
 
-CHAPA_WEBHOOK_URL = env("CHAPA_WEBHOOK_URL")
-CHAPA_RETURN_URL = "https://a12097a9f565.ngrok-free.app/payment-success/"
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    'formatters': {
+        'verbose': {
+            'format': '[{asctime}] {levelname} {name} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname}: {message}',
+            'style': '{',
+        },
+    },
+
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'django.log'),
+            'formatter': 'verbose',
+        },
+    },
+
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'product_api': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}
+
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(hours=12),   # or days=1
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=30),
+    "ROTATE_REFRESH_TOKENS": False,
+    "BLACKLIST_AFTER_ROTATION": True,
+    "USER_ID_FIELD": "user_id",   # your PK field
+    "USER_ID_CLAIM": "user_id",   # claim name in the token
+}

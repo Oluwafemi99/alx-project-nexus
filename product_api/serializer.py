@@ -1,11 +1,41 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
+from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework_simplejwt.exceptions import InvalidToken, TokenError
+from rest_framework_simplejwt.settings import api_settings
 from .models import (Product, Reviews, ProductImage,
                      Category, Wishlist, Reservation,
-                     OrderItem, Order)
+                     OrderItem, Order, Account, DailySales,
+                     RequestLog, BlockedIP, SuspiciousIP)
 from PIL import Image
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer, TokenRefreshSerializer
 
 Users = get_user_model()
+
+
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    @classmethod
+    def get_token(cls, user):
+        token = super().get_token(user)
+        token['user_id'] = str(user.user_id)  # include UUID in token payload
+        return token
+
+
+class CustomTokenRefreshSerializer(TokenRefreshSerializer):
+    def validate(self, attrs):
+        refresh = attrs.get("refresh")
+
+        try:
+            token = RefreshToken(refresh)
+        except TokenError as e:
+            raise InvalidToken({"detail": "Invalid refresh token", "error": str(e)})
+
+        # Create new access token
+        access_token = str(token.access_token)
+        return {
+            "access": access_token,
+            "refresh": str(token),
+        }
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -13,7 +43,8 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Users
-        fields = ['user_id', 'username', 'email', 'phone', 'password']
+        fields = ['user_id', 'username', 'email', 'phone',
+                  'password', 'first_name', 'last_name']
 
     def create(self, validated_data):
         password = validated_data.pop('password')
@@ -95,13 +126,24 @@ class WishlistSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Wishlist
-        fields = ['wishlist_id', 'user', 'product', 'product_name', 'added_at']
+        fields = ['wishlist_id', 'user', 'product', 'product_details',
+                  'added_at', 'quantity']
         read_only_fields = ['user', 'added_at']
 
     def validate_product(self, value):
         if not value.stock_quantity or value.stock_quantity <= 0:
             raise serializers.ValidationError("Product is out of stock.")
         return value
+
+    def validate(self, data):
+        product = data.get("product")
+        quantity = data.get("quantity", 1)
+
+        if quantity > product.stock_quantity:
+            raise serializers.ValidationError(
+                {"quantity": f"Only {product.stock_quantity} units available for {product.name}"}
+            )
+        return data
 
 
 class ReservationSerializer(serializers.ModelSerializer):
@@ -154,3 +196,39 @@ class OrderSerializer(serializers.ModelSerializer):
         if Order.objects.filter(tx_ref=value).exists():
             raise serializers.ValidationError("Transaction reference already exists.")
         return value
+
+
+class AccountSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Account
+        fields = ['account_id', 'total_sales_amount',
+                  'total_transactions', 'total_stock_sold', 'updated_at']
+
+
+class DailySalesSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = DailySales
+        fields = '__all__'
+
+
+class RequestlogSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = RequestLog
+        fields = '__all__'
+
+
+class BlockedIPSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = BlockedIP
+        fields = '__all__'
+
+
+class SupiciousIPSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = SuspiciousIP
+        fields = "__all__"

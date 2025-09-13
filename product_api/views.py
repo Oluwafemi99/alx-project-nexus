@@ -5,12 +5,14 @@ from django_filters.rest_framework import DjangoFilterBackend
 from django.core.exceptions import PermissionDenied
 from .models import (Product, ProductImage, Reviews,
                      Reservation, Wishlist, Category,
-                     Order, OrderItem, Users)
+                     Order, OrderItem, Users, Account,
+                     DailySales, BlockedIP, RequestLog, SuspiciousIP)
 from .serializer import (
     ProductSerializer, ProductImageSerializer, WishlistSerializer,
     ReservationSerializer, CategorySerializer, ReviewSerializer,
-    OrderItemSerializer, OrderSerializer
-)
+    OrderItemSerializer, OrderSerializer, AccountSerializer,
+    DailySalesSerializer, SupiciousIPSerializer, BlockedIPSerializer,
+    RequestlogSerializer)
 from .filters import ProductFilter
 from .pagination import (ProductPagination, ReviewsPagination,
                          CategoryPagination)
@@ -23,6 +25,16 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import send_mail
 import requests
 from django.conf import settings
+from .utils import get_all_products
+from django.views.decorators.cache import cache_page
+from django.utils.decorators import method_decorator
+import logging
+from decimal import Decimal
+from datetime import datetime
+from django.db.models import Sum, Avg
+from django.db import transaction
+
+logger = logging.getLogger(__name__)
 
 
 # Product Views
@@ -35,12 +47,16 @@ class ProductCreateView(generics.CreateAPIView):
         serializer.save(user=self.request.user)
 
 
+@method_decorator(csrf_exempt, name='dispatch')
+@method_decorator(cache_page(60 * 15), name='dispatch')
 class ProductListView(generics.ListAPIView):
-    queryset = Product.objects.all()
     serializer_class = ProductSerializer
     pagination_class = ProductPagination
     permission_classes = [permissions.IsAuthenticated, permissions.IsAdminUser]
     filterset_class = ProductFilter
+
+    def get_queryset(self):
+        return get_all_products()
 
 
 class ProductSearchView(generics.ListAPIView):
@@ -90,6 +106,12 @@ class ProductImageUploadView(generics.CreateAPIView):
     parser_classes = [parsers.MultiPartParser, parsers.FormParser]
 
 
+class ProductImageListView(generics.ListAPIView):
+    queryset = ProductImage.objects.all()
+    serializer_class = ProductImageSerializer
+    permission_classes = [permissions.AllowAny]
+
+
 # Category Views
 class CategoryView(viewsets.ModelViewSet):
     queryset = Category.objects.all().order_by('category_id')
@@ -115,8 +137,10 @@ class ReviewsCreateView(generics.CreateAPIView):
 class ReviewsListView(generics.ListAPIView):
     queryset = Reviews.objects.all().order_by('reviews_id')
     serializer_class = ReviewSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
     pagination_class = ReviewsPagination
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['product']  # Enables ?product=UUID filtering
 
 
 # Reservation Views
@@ -184,7 +208,17 @@ class WishlistDeleteView(generics.DestroyAPIView):
         return Wishlist.objects.filter(user=self.request.user)
 
 
-# wishlist Views
+class ReservationViewSet(viewsets.ModelViewSet):
+    queryset = Reservation.objects.all()
+    serializer_class = ReservationSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        # Only show reservations for the logged-in user
+        return self.queryset.filter(user=self.request.user)
+
+
+# wishlist Views for Transaction
 class WishlistCheckoutView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -195,21 +229,27 @@ class WishlistCheckoutView(APIView):
         if not wishlist_items.exists():
             return Response({'error': 'Your wishlist is empty.'}, status=400)
 
-        total_amount = sum(item.product.price for item in wishlist_items)
-        tx_ref = f"wishlist-{user.user_id}-{int(timezone.now().timestamp())}"
+        for item in wishlist_items:
+            if item.quantity > item.product.stock_quantity:
+                return Response({
+                    'error': f"Product '{item.product.name}' only has {item.product.stock_quantity} items available"
+                }, status=400)
+
+        total_amount = sum(item.product.price * item.quantity for item in wishlist_items)
+        tx_ref = f"wl-{str(user.user_id)[:8]}-{int(timezone.now().timestamp())}"
 
         payload = {
             "amount": str(total_amount),
             "currency": "ETB",
-            "email": user.email,
+            "email": user.email or "tobi@example.com",
             "first_name": user.first_name or "Customer",
             "last_name": user.last_name or "",
             "tx_ref": tx_ref,
-            "callback_url": settings.CHAPA_WEBHOOK_URL,
+            "callback_url": "https://0911b83c8cae.ngrok-free.app/chapa-webhook/",
             "return_url": settings.CHAPA_RETURN_URL,
             "customization": {
-                "title": "Wishlist Checkout",
-                "description": f"Payment for {wishlist_items.count()} wishlist item(s)"
+                "title": "WishlistPay",
+                "description": f"Payment for {wishlist_items.count()} wishlist items"
             }
         }
 
@@ -217,7 +257,7 @@ class WishlistCheckoutView(APIView):
             "Authorization": f"Bearer {settings.CHAPA_SECRET}",
             "Content-Type": "application/json"
         }
-
+        logger.info("Chapa payload: %s", payload)
         try:
             response = requests.post(f"{settings.CHAPA_API_URL}/v1/transaction/initialize", json=payload, headers=headers)
             data = response.json()
@@ -230,7 +270,10 @@ class WishlistCheckoutView(APIView):
                 "checkout_url": checkout_url,
                 "tx_ref": tx_ref,
                 "amount": total_amount,
-                "items": [item.product.name for item in wishlist_items]
+                "items": [
+                    {"product": item.product.name, "quantity": item.quantity, "subtotal": item.product.price * item.quantity}
+                    for item in wishlist_items
+                ]
             })
 
         except Exception as e:
@@ -252,37 +295,74 @@ def verify_payment(request):
     }
 
     try:
-        response = requests.get(f"{settings.CHAPA_API_URL}/v1/transaction/verify/{tx_ref}", headers=headers)
+        # Verify payment with Chapa
+        response = requests.get(
+            f"{settings.CHAPA_API_URL}/v1/transaction/verify/{tx_ref}",
+            headers=headers
+        )
         result = response.json()
 
-        if result.get("status") != "success":
+        if result.get("status") != "success" or "data" not in result:
             return Response({'error': 'Payment not successful'}, status=400)
 
-        email = result['data']['customer']['email']
-        amount = result['data']['amount']
-        user = Users.objects.filter(email=email).first()
+        data = result["data"]
+        email = data.get("customer", {}).get("email")
+        amount = Decimal(data.get("amount", "0"))
+
+        # Get user from tx_ref OR email
+        short_uuid = tx_ref.split("-")[1]
+        user = Users.objects.filter(user_id__startswith=short_uuid).first() \
+            or Users.objects.filter(email=email).first()
 
         if not user:
             return Response({'error': 'User not found'}, status=404)
 
-        order = Order.objects.create(
-            user=user,
-            tx_ref=tx_ref,
-            total_amount=amount,
-            created_at=timezone.now()
-        )
-
         wishlist_items = Wishlist.objects.select_related('product').filter(user=user)
-        for item in wishlist_items:
-            OrderItem.objects.create(
-                order=order,
-                product=item.product,
-                price=item.product.price,
-                quantity=1
+        if not wishlist_items.exists():
+            return Response({'error': 'Your wishlist is empty.'}, status=400)
+
+        with transaction.atomic():
+            # Check stock and reduce it atomically
+            for item in wishlist_items:
+                product = Product.objects.select_for_update().get(product_id=item.product.product_id)
+                if item.quantity > product.stock_quantity:
+                    return Response({
+                        'error': f"Product '{product.name}' only has {product.stock_quantity} items available"
+                    }, status=400)
+                product.stock_quantity -= item.quantity
+                product.save()
+
+            # Create the order
+            order = Order.objects.create(
+                user=user,
+                tx_ref=tx_ref,
+                total_amount=amount,
+                created_at=timezone.now()
             )
 
-        wishlist_items.delete()
+            # Create order items
+            for item in wishlist_items:
+                OrderItem.objects.create(
+                    order=order,
+                    product=item.product,
+                    price=item.product.price,
+                    quantity=item.quantity
+                )
 
+            # Update global account
+            stock_sold = sum(item.quantity for item in wishlist_items)
+            account, _ = Account.objects.get_or_create(
+                account_id="00000000-0000-0000-0000-000000000001"
+            )
+            account.total_sales_amount += amount
+            account.total_transactions += 1
+            account.total_stock_sold += stock_sold
+            account.save()
+
+            # Clear wishlist
+            wishlist_items.delete()
+
+        # Send confirmation email
         send_mail(
             subject='Order Confirmation',
             message=f'Thank you for your payment! Your order {order.order_id} has been confirmed.',
@@ -291,12 +371,52 @@ def verify_payment(request):
             fail_silently=True
         )
 
+        logger.info(f"User {user.email} verified payment {tx_ref}, order {order.order_id} created successfully.")
+
         return Response({
             'message': 'Payment verified and order created successfully',
             'order_id': str(order.order_id),
             'tx_ref': tx_ref,
-            'amount': amount
+            'amount': str(amount)
         })
 
     except Exception as e:
+        logger.error(f"Payment verification failed for tx_ref {tx_ref}: {str(e)}")
         return Response({'error': str(e)}, status=500)
+
+
+class GlobalAccountListView(generics.ListAPIView):
+    permission_classes = [permissions.IsAdminUser]
+    serializer_class = AccountSerializer
+    queryset = Account.objects.all()
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = {
+        'updated_at': ['gte', 'lte'],  # filter by updated_at__gte and updated_at__lte
+    }
+
+
+class DailySalesListView(generics.ListAPIView):
+    queryset = DailySales.objects.all()
+    serializer_class = DailySalesSerializer
+    permission_classes = [permissions.IsAdminUser]
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['date']
+
+
+class BlockedIPListView(generics.ListAPIView):
+    queryset = BlockedIP.objects.all()
+    serializer_class = BlockedIPSerializer
+    permission_classes = [permissions.IsAdminUser]
+
+
+class RequestLogListView(generics.ListAPIView):
+    queryset = RequestLog.objects.all()
+    serializer_class = RequestlogSerializer
+    permission_classes = [permissions.IsAdminUser]
+
+
+class SuspiciousIPListView(generics.ListAPIView):
+    queryset = SuspiciousIP.objects.all()
+    serializer_class = SupiciousIPSerializer
+    permission_classes = [permissions.IsAdminUser]
+

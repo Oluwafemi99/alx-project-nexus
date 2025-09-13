@@ -32,7 +32,7 @@ class Product(models.Model):
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name='products')
     stock_quantity = models.IntegerField()
-    image_url = models.URLField()
+    image_url = models.URLField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     user_id = models.ForeignKey(
         Users, on_delete=models.CASCADE, related_name='products')
@@ -57,7 +57,7 @@ class Reviews(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'{self.product_id}: {self.Ratings}'
+        return f'{self.product_id}: {self.ratings}'
 
 
 class ProductImage(models.Model):
@@ -72,9 +72,11 @@ class Wishlist(models.Model):
     wishlist_id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, db_index=True)
     user = models.ForeignKey(
-        Users, on_delete=models.CASCADE, related_name='wishlist')
+        Users, on_delete=models.CASCADE,
+        related_name='wishlist')
     product = models.ForeignKey(
         Product, on_delete=models.CASCADE, related_name='wishlisted_by')
+    quantity = models.PositiveIntegerField(default=1)
     added_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -106,6 +108,19 @@ class Transaction(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 
+class Account(models.Model):
+    account_id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False, db_index=True
+    )
+    total_sales_amount = models.DecimalField(max_digits=12, decimal_places=2, default=0)
+    total_transactions = models.PositiveIntegerField(default=0)
+    total_stock_sold = models.PositiveIntegerField(default=0)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Sales: {self.total_sales_amount}, Transactions: {self.total_transactions}, Stock Sold: {self.total_stock_sold}"
+
+
 class Order(models.Model):
     order_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(Users, on_delete=models.CASCADE, related_name='orders')
@@ -113,9 +128,54 @@ class Order(models.Model):
     total_amount = models.DecimalField(max_digits=10, decimal_places=2)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return f'{self.user}: {self.order_id}'
+
 
 class OrderItem(models.Model):
+    orderitem_id = models.UUIDField(primary_key=True, default=uuid.uuid4,
+                                    db_index=True, editable=False)
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     quantity = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return self.order
+
+
+class RequestLog(models.Model):
+    ip_address = models.GenericIPAddressField()
+    timestamp = models.DateTimeField()
+    path = models.CharField(max_length=2048)
+    country = models.CharField(max_length=100, blank=True, null=True)
+    city = models.CharField(max_length=100, blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.ip_address} at {self.timestamp} -> {self.path}"
+
+
+class BlockedIP(models.Model):
+    ip_address = models.GenericIPAddressField()
+
+    def __str__(self):
+        return self.ip_address
+
+
+class SuspiciousIP(models.Model):
+    ip_address = models.GenericIPAddressField()
+    reason = models.TextField()
+
+    def __str__(self):
+        return f'{self.ip_address}, {self.reason}'
+
+
+class DailySales(models.Model):
+    daily_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    date = models.DateField(auto_now_add=True)
+    total_sales_amount = models.DecimalField(max_digits=12, decimal_places=2, default=0)
+    total_transactions = models.PositiveIntegerField(default=0)
+    total_stock_sold = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return f"DailySales {self.date}"

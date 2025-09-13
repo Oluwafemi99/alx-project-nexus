@@ -8,11 +8,16 @@ from .views import (
     CategoryView, ReviewsCreateView, ReviewsListView,
     ReserveProductView, WishlistListCreateView, WishlistDeleteView,
     WishlistCheckoutView, OrderListCreateView, OrderItemDetailView,
-    OrderDetailView, OrderItemListCreateView
-)
+    OrderDetailView, OrderItemListCreateView, ReservationViewSet,
+    ProductImageListView, verify_payment, GlobalAccountListView,
+    DailySalesListView, BlockedIPListView, RequestLogListView,
+    SuspiciousIPListView)
+from .auth import (CustomTokenObtainPairView, CustomTokenRefreshView,
+                   LogoutView, RegisterView)
 
 router = DefaultRouter()
 router.register(r'categories', CategoryView, basename='category')
+router.register(r'reservations', ReservationViewSet, basename='reservation')
 
 urlpatterns = [
     # Product URLs
@@ -23,8 +28,9 @@ urlpatterns = [
     path('products/<int:pk>/update/', ProductUpdateView.as_view(), name='product-update'),
     path('products/<int:pk>/delete/', ProductDeleteView.as_view(), name='product-delete'),
     path('products/image/upload/', ProductImageUploadView.as_view(), name='product-image-upload'),
+    path('Product/image/', ProductImageListView.as_view(), name='image-list'),
 
-    # Category URLs (via router)
+    # Reservation and Category URLs (via router)
     path('', include(router.urls)),
 
     # Review URLs
@@ -38,10 +44,26 @@ urlpatterns = [
     path('wishlist/', WishlistListCreateView.as_view(), name='wishlist-list-create'),
     path('wishlist/<int:wishlist_id>/delete/', WishlistDeleteView.as_view(), name='wishlist-delete'),
     path('wishlist/checkout/', WishlistCheckoutView.as_view(), name='wishlist-checkout'),
+    path("chapa-webhook/", verify_payment, name="verify-payment"),
 
     # Order and OrderItems Urls
     path('orders/', OrderListCreateView.as_view(), name='order-list-create'),
     path('orders/<uuid:pk>/', OrderDetailView.as_view(), name='order-detail'),
     path('order-items/', OrderItemListCreateView.as_view(), name='orderitem-list-create'),
     path('order-items/<int:pk>/', OrderItemDetailView.as_view(), name='orderitem-detail'),
+
+    # Auth Urls
+    path('token/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/refresh/', CustomTokenRefreshView.as_view(), name='token_refresh'),
+    path('logout/', LogoutView.as_view(), name='logout'),
+    path('register/', RegisterView.as_view(), name='register'),
+
+    # Global Account View
+    path('admin/global-accounts/', GlobalAccountListView.as_view(), name='global-account-list'),
+    path('admin/daily-sales/', DailySalesListView.as_view(), name='daily-sales'),
+
+    # Admin view for security checks
+    path('admin/suspicious-ip/', SuspiciousIPListView.as_view(), name='suspicious-ip'),
+    path('admin/blocked-ip/', BlockedIPListView.as_view(), name='blocked-ip'),
+    path('admin/request-log/', RequestLogListView.as_view(), name='request-log'),
 ]

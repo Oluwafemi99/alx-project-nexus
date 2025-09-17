@@ -20,6 +20,7 @@ logger = logging.getLogger(__name__)
 Users = get_user_model()
 
 
+# Simple JWT authenticatin for Users registration Login and Logout
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
     permission_classes = [permissions.AllowAny]

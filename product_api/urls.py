@@ -6,12 +6,12 @@ from .views import (
     ProductCreateView, ProductListView, ProductSearchView, ProductDetailsView,
     ProductUpdateView, ProductDeleteView, ProductImageUploadView,
     CategoryView, ReviewsCreateView, ReviewsListView,
-    ReserveProductView, WishlistListCreateView, WishlistDeleteView,
+    WishlistListCreateView, WishlistDeleteView,
     WishlistCheckoutView, OrderListCreateView, OrderItemDetailView,
     OrderDetailView, OrderItemListCreateView, ReservationViewSet,
     ProductImageListView, verify_payment, GlobalAccountListView,
     DailySalesListView, BlockedIPListView, RequestLogListView,
-    SuspiciousIPListView)
+    SuspiciousIPListView, ReservationCheckoutView, verify_Reserve_payment)
 from .auth import (CustomTokenObtainPairView, CustomTokenRefreshView,
                    LogoutView, RegisterView)
 
@@ -22,13 +22,13 @@ router.register(r'reservations', ReservationViewSet, basename='reservation')
 urlpatterns = [
     # Product URLs
     path('products/create/', ProductCreateView.as_view(), name='product-create'),
-    path('products/', ProductListView.as_view(), name='product-list'),
-    path('products/search/', ProductSearchView.as_view(), name='product-search'),
-    path('products/<int:pk>/', ProductDetailsView.as_view(), name='product-detail'),
+    path('products/', ProductListView.as_view(), name='list-all-product'),
+    path('products/search/', ProductSearchView.as_view(), name='search-product'),
+    path('products/<int:pk>/', ProductDetailsView.as_view(), name='product-details'),
     path('products/<int:pk>/update/', ProductUpdateView.as_view(), name='product-update'),
     path('products/<int:pk>/delete/', ProductDeleteView.as_view(), name='product-delete'),
     path('products/image/upload/', ProductImageUploadView.as_view(), name='product-image-upload'),
-    path('Product/image/', ProductImageListView.as_view(), name='image-list'),
+    path('Product/image/', ProductImageListView.as_view(), name='get-all-images'),
 
     # Reservation and Category URLs (via router)
     path('', include(router.urls)),
@@ -38,7 +38,8 @@ urlpatterns = [
     path('reviews/', ReviewsListView.as_view(), name='review-list'),
 
     # Reservation URLs
-    path('reservations/create/', ReserveProductView.as_view(), name='reservation-create'),
+    path('reservation/checkout/', ReservationCheckoutView.as_view(), name='reservation-checkout'),
+    path('verify/reserve_payment/', verify_Reserve_payment, name='verify-reserve-payment'),
 
     # Wishlist URLs
     path('wishlist/', WishlistListCreateView.as_view(), name='wishlist-list-create'),

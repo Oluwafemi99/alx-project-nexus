@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django_redis',
     'django_ratelimit',
     "product_api.apps.ProductApiConfig",
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -146,14 +147,6 @@ REST_FRAMEWORK = {
     ),
 }
 
-
-SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
-    'ROTATE_REFRESH_TOKENS': True,
-    'BLACKLIST_AFTER_ROTATION': True,
-    'AUTH_HEADER_TYPES': ('Bearer',),
-}
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -256,10 +249,21 @@ LOGGING = {
 
 
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(hours=12),   # or days=1
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=30),
+    "ACCESS_TOKEN_LIFETIME": timedelta(hours=12),   # just for testing... 30mins is ideal
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=30),   # one day is ideal
     "ROTATE_REFRESH_TOKENS": False,
     "BLACKLIST_AFTER_ROTATION": True,
-    "USER_ID_FIELD": "user_id",   # your PK field
+    "USER_ID_FIELD": "user_id",   # PK field
     "USER_ID_CLAIM": "user_id",   # claim name in the token
+}
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header',
+            'description': 'JWT Authorization header using the Bearer scheme. Example: "Bearer {token}"',
+        }
+    },
 }

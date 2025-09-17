@@ -4208,3 +4208,674 @@ ValueError: Field 'id' expected a number but got 'wl-5d4a4517-1757700837'.
 [2025-09-13 14:03:40,759] WARNING django.request Not Found: /api/ ^categories/
 [2025-09-13 14:03:40,759] WARNING django.server "GET /api/%20%5Ecategories/ HTTP/1.1" 404 10176
 [2025-09-13 14:04:57,332] INFO django.server "GET /api/admin/request-log/ HTTP/1.1" 200 23281
+[2025-09-13 18:50:01,005] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-13 18:50:18,092] WARNING django.request Not Found: /api/ ^categories/
+[2025-09-13 18:50:18,093] WARNING django.server "GET /api/%20%5Ecategories/ HTTP/1.1" 404 10437
+[2025-09-13 18:50:57,264] INFO django.server "GET /swagger/ HTTP/1.1" 200 2214
+[2025-09-13 18:50:57,308] INFO django.server "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[2025-09-13 18:50:57,315] INFO django.server "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[2025-09-13 18:50:57,316] INFO django.server "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+[2025-09-13 18:50:57,319] INFO django.server "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[2025-09-13 18:50:57,319] INFO django.server "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[2025-09-13 18:50:57,324] INFO django.server "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+[2025-09-13 18:50:57,328] INFO django.server "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+[2025-09-13 18:50:57,499] INFO django.server "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+[2025-09-13 18:50:57,571] INFO django.server "GET /swagger/?format=openapi HTTP/1.1" 200 24736
+[2025-09-13 21:03:31,935] WARNING django.request Not Found: /accounts/login/
+[2025-09-13 21:03:31,939] WARNING django.server "GET /accounts/login/?next=/swagger/ HTTP/1.1" 404 2627
+[2025-09-13 21:04:53,963] WARNING django.request Unauthorized: /api/admin/blocked-ip/
+[2025-09-13 21:04:53,964] WARNING django.server "GET /api/admin/blocked-ip/ HTTP/1.1" 401 58
+[2025-09-13 21:06:24,560] WARNING django.request Unauthorized: /api/categories/
+[2025-09-13 21:06:24,560] WARNING django.server "GET /api/categories/?search=fruits HTTP/1.1" 401 58
+[2025-09-13 21:10:23,418] INFO django.server "GET /redoc/ HTTP/1.1" 200 928
+[2025-09-13 21:10:23,433] INFO django.server "GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+[2025-09-13 21:10:23,444] INFO django.server "GET /static/drf-yasg/redoc-init.js HTTP/1.1" 200 2566
+[2025-09-13 21:10:23,447] INFO django.server "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+[2025-09-13 21:10:23,458] INFO django.server "GET /static/drf-yasg/redoc/redoc.min.js HTTP/1.1" 200 1042511
+[2025-09-13 21:10:23,533] INFO django.server "GET /static/drf-yasg/redoc/redoc-logo.png HTTP/1.1" 200 4969
+[2025-09-13 21:10:23,585] INFO django.server "GET /redoc/?format=openapi HTTP/1.1" 200 24736
+[2025-09-13 23:24:56,553] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-13 23:25:15,139] WARNING django.request Unauthorized: /api/wishlist/
+[2025-09-13 23:25:15,139] WARNING django.server "POST /api/wishlist/ HTTP/1.1" 401 172
+[2025-09-13 23:26:12,038] ERROR product_api.auth Logout failed: Token is expired
+[2025-09-13 23:26:12,038] WARNING django.request Bad Request: /api/logout/
+[2025-09-13 23:26:12,038] WARNING django.server "POST /api/logout/ HTTP/1.1" 400 26
+[2025-09-13 23:27:30,040] WARNING django.request Unauthorized: /api/token/refresh/
+[2025-09-13 23:27:30,041] WARNING django.server "POST /api/token/refresh/ HTTP/1.1" 401 86
+[2025-09-13 23:27:57,540] INFO django.server "POST /api/token/ HTTP/1.1" 200 582
+[2025-09-13 23:28:35,185] INFO django.server "POST /api/wishlist/ HTTP/1.1" 201 589
+[2025-09-13 23:29:04,506] INFO product_api.views Chapa payload: {'amount': '200.00', 'currency': 'ETB', 'email': 'tobi@example.com', 'first_name': 'Customer', 'last_name': '', 'tx_ref': 'wl-58d3158b-1757806144', 'callback_url': 'https://0911b83c8cae.ngrok-free.app/chapa-webhook/', 'return_url': 'https://0911b83c8cae.ngrok-free.app/payment/success/', 'customization': {'title': 'WishlistPay', 'description': 'Payment for 1 wishlist items'}}
+[2025-09-13 23:29:06,652] ERROR django.request Internal Server Error: /api/wishlist/checkout/
+[2025-09-13 23:29:06,654] ERROR django.server "POST /api/wishlist/checkout/ HTTP/1.1" 500 40
+[2025-09-13 23:29:55,457] INFO django.server "POST /api/token/ HTTP/1.1" 200 582
+[2025-09-13 23:30:25,909] INFO django.server "POST /api/wishlist/ HTTP/1.1" 201 589
+[2025-09-13 23:30:58,318] INFO product_api.views Chapa payload: {'amount': '200.00', 'currency': 'ETB', 'email': 'oluwafemidojumo@gmail.com', 'first_name': 'seyi', 'last_name': 'jacob', 'tx_ref': 'wl-6781c6ea-1757806258', 'callback_url': 'https://0911b83c8cae.ngrok-free.app/chapa-webhook/', 'return_url': 'https://0911b83c8cae.ngrok-free.app/payment/success/', 'customization': {'title': 'WishlistPay', 'description': 'Payment for 1 wishlist items'}}
+[2025-09-13 23:30:59,339] INFO django.server "POST /api/wishlist/checkout/ HTTP/1.1" 200 217
+[2025-09-13 23:31:26,945] WARNING django.request Unauthorized: /api/chapa-webhook/
+[2025-09-13 23:31:26,945] WARNING django.server "POST /api/chapa-webhook/ HTTP/1.1" 401 172
+[2025-09-13 23:32:33,526] INFO product_api.views User oluwafemidojumo@gmail.com verified payment wl-6781c6ea-1757806258, order 15793568-692c-41ff-bd92-b4ef02d2912f created successfully.
+[2025-09-13 23:32:33,532] INFO django.server "POST /api/chapa-webhook/ HTTP/1.1" 200 160
+[2025-09-13 23:38:47,686] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-13 23:38:51,171] INFO django.server "POST /api/wishlist/ HTTP/1.1" 201 589
+[2025-09-13 23:39:04,784] INFO product_api.views Chapa payload: {'amount': '100.00', 'currency': 'ETB', 'email': 'oluwafemidojumo@gmail.com', 'first_name': 'seyi', 'last_name': 'jacob', 'tx_ref': 'wl-6781c6ea-1757806744', 'callback_url': 'https://0911b83c8cae.ngrok-free.app/chapa-webhook/', 'return_url': 'https://0911b83c8cae.ngrok-free.app/payment/success/', 'customization': {'title': 'WishlistPay', 'description': 'Payment for 1 wishlist items'}}
+[2025-09-13 23:39:06,108] INFO django.server "POST /api/wishlist/checkout/ HTTP/1.1" 200 217
+[2025-09-13 23:39:58,144] INFO product_api.views User oluwafemidojumo@gmail.com verified payment wl-6781c6ea-1757806744, order 10e0378d-0a52-4bd5-83ca-40a36dbc6c91 created successfully.
+[2025-09-13 23:39:58,153] INFO django.server "POST /api/chapa-webhook/ HTTP/1.1" 200 160
+[2025-09-13 23:40:16,886] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-13 23:40:17,291] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-13 23:52:52,752] INFO django.server "GET /swagger/ HTTP/1.1" 200 2214
+[2025-09-13 23:52:52,768] INFO django.server "GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+[2025-09-13 23:52:52,780] INFO django.server "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 304 0
+[2025-09-13 23:52:52,780] INFO django.server "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 304 0
+[2025-09-13 23:52:52,781] INFO django.server "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 304 0
+[2025-09-13 23:52:52,785] INFO django.server "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+[2025-09-13 23:52:52,785] INFO django.server "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 304 0
+[2025-09-13 23:52:52,785] INFO django.server "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 304 0
+[2025-09-13 23:52:53,004] INFO django.server "GET /swagger/?format=openapi HTTP/1.1" 200 24736
+[2025-09-13 23:57:24,255] WARNING django.request Unauthorized: /api/products/
+[2025-09-13 23:57:24,255] WARNING django.server "GET /api/products/?page=1&page_size=10 HTTP/1.1" 401 58
+[2025-09-14 00:07:43,153] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/alx_project_nexus/urls.py changed, reloading.
+[2025-09-14 00:07:43,610] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:09:43,639] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:09:55,507] INFO django.server "GET /swagger/ HTTP/1.1" 200 2214
+[2025-09-14 00:09:55,698] INFO django.server "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 304 0
+[2025-09-14 00:09:55,734] INFO django.server "GET /swagger/?format=openapi HTTP/1.1" 200 24736
+[2025-09-14 00:10:18,902] WARNING django.request Not Found: /accounts/login/
+[2025-09-14 00:10:18,902] WARNING django.server "GET /accounts/login/?next=/swagger/ HTTP/1.1" 404 2627
+[2025-09-14 00:13:22,565] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/alx_project_nexus/settings.py changed, reloading.
+[2025-09-14 00:13:22,996] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:13:27,487] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/alx_project_nexus/settings.py changed, reloading.
+[2025-09-14 00:13:27,782] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:13:30,115] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/alx_project_nexus/settings.py changed, reloading.
+[2025-09-14 00:13:30,386] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:13:40,997] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/alx_project_nexus/urls.py changed, reloading.
+[2025-09-14 00:13:41,280] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:14:07,184] INFO django.server "GET /swagger/ HTTP/1.1" 200 2214
+[2025-09-14 00:14:07,315] INFO django.server "GET /swagger/?format=openapi HTTP/1.1" 200 24876
+[2025-09-14 00:14:08,226] INFO django.server "GET /swagger/ HTTP/1.1" 200 2214
+[2025-09-14 00:14:08,291] INFO django.server "GET /swagger/?format=openapi HTTP/1.1" 200 24876
+[2025-09-14 00:15:00,734] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:15:01,456] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:15:24,699] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:15:25,090] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:15:29,547] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:15:29,844] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:15:50,875] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:15:51,233] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:15:52,766] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:15:53,040] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:15:54,406] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:15:54,680] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:15:56,004] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:15:56,288] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:15:57,632] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:15:57,948] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:15:59,401] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:15:59,665] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:16:00,987] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:16:01,247] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:16:02,584] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:16:02,847] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:16:06,224] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:16:06,522] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:16:07,883] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:16:08,374] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:16:22,136] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:16:22,488] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:16:24,877] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:16:25,139] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:16:26,493] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:16:26,768] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:16:30,144] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:16:30,429] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:16:39,006] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:16:39,283] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:16:41,646] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:16:41,911] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:16:45,310] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:16:45,586] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:16:54,185] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:16:54,478] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:16:56,868] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:16:57,170] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:16:58,501] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:16:58,768] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:17:03,173] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:17:03,468] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:17:05,843] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:17:06,116] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:17:17,942] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 00:17:18,487] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 00:19:13,575] INFO django.server "GET /swagger/ HTTP/1.1" 200 2214
+[2025-09-14 00:19:13,770] INFO django.server "GET /swagger/?format=openapi HTTP/1.1" 200 24876
+[2025-09-14 00:20:56,745] WARNING django.request Unauthorized: /api/products/
+[2025-09-14 00:20:56,752] WARNING django.server "GET /api/products/?page=1&page_size=1 HTTP/1.1" 401 58
+[2025-09-14 11:54:30,790] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 11:55:03,729] INFO django.server "POST /api/token/ HTTP/1.1" 200 582
+[2025-09-14 11:56:54,015] WARNING django.request Not Found: /api/ ^categories/
+[2025-09-14 11:56:54,016] WARNING django.server "GET /api/%20%5Ecategories/ HTTP/1.1" 404 10449
+[2025-09-14 11:57:15,518] WARNING django.request Not Found: /api/ ^categories/
+[2025-09-14 11:57:15,518] WARNING django.server "GET /api/%20%5Ecategories/ HTTP/1.1" 404 10449
+[2025-09-14 11:57:51,286] WARNING django.request Unauthorized: /api/reservations/
+[2025-09-14 11:57:51,287] WARNING django.server "GET /api/reservations/ HTTP/1.1" 401 5225
+[2025-09-14 11:57:51,324] INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[2025-09-14 11:57:51,345] INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[2025-09-14 11:57:51,346] INFO django.server "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+[2025-09-14 11:57:51,347] INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[2025-09-14 11:57:51,347] INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[2025-09-14 11:57:51,347] INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[2025-09-14 11:57:51,348] INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[2025-09-14 11:57:51,348] INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[2025-09-14 11:57:51,367] INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[2025-09-14 11:57:51,368] INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[2025-09-14 11:57:51,369] INFO django.server "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+[2025-09-14 11:57:51,371] INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[2025-09-14 11:59:57,966] WARNING django.request Bad Request: /api/reservations/
+[2025-09-14 11:59:57,967] WARNING django.server "POST /api/reservations/ HTTP/1.1" 400 78
+[2025-09-14 12:02:18,026] ERROR django.request Internal Server Error: /api/reservations/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py", line 158, in create
+    return super().create(validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 861, in save_base
+    pre_save.send(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "/Users/Pro/Downloads/alx-project-nexus/product_api/signals.py", line 27, in block_if_stock_low
+    raise ValidationError(f"Insufficient stock for '{product.name}'. Only {product.stock_quantity} left.")
+django.core.exceptions.ValidationError: ["Insufficient stock for 'orange'. Only 3 left."]
+[2025-09-14 12:02:18,029] ERROR django.server "POST /api/reservations/ HTTP/1.1" 500 148524
+[2025-09-14 12:06:17,322] ERROR django.request Internal Server Error: /api/reservations/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/connection.py", line 938, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/transport/pyamqp.py", line 203, in establish_connection
+    conn.connect()
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/amqp/connection.py", line 324, in connect
+    self.transport.connect()
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/amqp/transport.py", line 132, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/amqp/transport.py", line 175, in _connect
+    entries = socket.getaddrinfo(
+  File "/Users/Pro/.pyenv/versions/3.10.13/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py", line 158, in create
+    return super().create(validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save_base
+    post_save.send(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "/Users/Pro/Downloads/alx-project-nexus/product_api/signals.py", line 35, in notify_low_stock
+    send_low_stock_email.delay(product.name, product.stock_quantity, 'admin@yourdomain.com')
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/celery/app/task.py", line 601, in apply_async
+    return app.send_task(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/celery/app/base.py", line 929, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/celery/backends/rpc.py", line 164, in on_task_call
+    maybe_declare(self.binding(producer.channel), retry=True)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/messaging.py", line 224, in _get_channel
+    channel = self._channel = channel()
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/messaging.py", line 240, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/connection.py", line 957, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/Users/Pro/.pyenv/versions/3.10.13/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [Errno 8] nodename nor servname provided, or not known
+[2025-09-14 12:06:17,326] ERROR django.server "POST /api/reservations/ HTTP/1.1" 500 257410
+[2025-09-14 12:11:53,906] WARNING django.request Not Found: /api/products/<03ae612c-9929-4ca1-b13b-3c739f96e6b7>/update/
+[2025-09-14 12:11:53,907] WARNING django.server "GET /api/products/%3C03ae612c-9929-4ca1-b13b-3c739f96e6b7%3E/update/ HTTP/1.1" 404 10587
+[2025-09-14 12:12:17,398] WARNING django.request Not Found: /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update/
+[2025-09-14 12:12:17,401] WARNING django.server "GET /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update/ HTTP/1.1" 404 10565
+[2025-09-14 12:12:22,018] WARNING django.request Not Found: /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update/
+[2025-09-14 12:12:22,018] WARNING django.server "GET /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update/ HTTP/1.1" 404 10565
+[2025-09-14 12:13:08,189] WARNING django.request Not Found: /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update/
+[2025-09-14 12:13:08,190] WARNING django.server "POST /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update/ HTTP/1.1" 404 10566
+[2025-09-14 12:13:37,820] WARNING django.request Not Found: /api/products/<03ae612c-9929-4ca1-b13b-3c739f96e6b7>/update/
+[2025-09-14 12:13:37,821] WARNING django.server "POST /api/products/%3C03ae612c-9929-4ca1-b13b-3c739f96e6b7%3E/update/ HTTP/1.1" 404 10588
+[2025-09-14 12:13:50,292] WARNING django.request Not Found: /api/products/update/
+[2025-09-14 12:13:50,292] WARNING django.server "POST /api/products/update/ HTTP/1.1" 404 10455
+[2025-09-14 12:13:53,622] WARNING django.request Not Found: /api/products/update/
+[2025-09-14 12:13:53,622] WARNING django.server "POST /api/products/update/ HTTP/1.1" 404 10455
+[2025-09-14 12:14:08,170] INFO django.server "GET /admin/ HTTP/1.1" 200 16203
+[2025-09-14 12:14:08,210] INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[2025-09-14 12:14:08,210] INFO django.server "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[2025-09-14 12:14:08,210] INFO django.server "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[2025-09-14 12:14:08,214] INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2025-09-14 12:14:08,216] INFO django.server "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[2025-09-14 12:14:08,216] INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[2025-09-14 12:14:08,217] INFO django.server "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[2025-09-14 12:14:08,231] INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2025-09-14 12:14:08,231] INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2025-09-14 12:14:08,232] INFO django.server "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+[2025-09-14 12:14:08,848] INFO django.server "GET /admin/ HTTP/1.1" 200 16203
+[2025-09-14 12:14:13,354] INFO django.server "GET /admin/product_api/product/ HTTP/1.1" 200 18374
+[2025-09-14 12:14:13,376] INFO django.server "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[2025-09-14 12:14:13,377] INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[2025-09-14 12:14:13,378] INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[2025-09-14 12:14:13,379] INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[2025-09-14 12:14:13,380] INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[2025-09-14 12:14:13,381] INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[2025-09-14 12:14:13,382] INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[2025-09-14 12:14:13,383] INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[2025-09-14 12:14:13,383] INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[2025-09-14 12:14:13,384] INFO django.server "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[2025-09-14 12:14:13,388] INFO django.server "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[2025-09-14 12:14:13,389] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 12:14:13,403] INFO django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[2025-09-14 12:14:13,404] INFO django.server "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+[2025-09-14 12:14:24,010] INFO django.server "GET /admin/product_api/product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/change/ HTTP/1.1" 200 20218
+[2025-09-14 12:14:24,090] INFO django.server "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[2025-09-14 12:14:24,090] INFO django.server "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+[2025-09-14 12:14:24,091] INFO django.server "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[2025-09-14 12:14:24,094] INFO django.server "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[2025-09-14 12:14:24,096] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 12:14:24,097] INFO django.server "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[2025-09-14 12:14:33,228] INFO django.server "POST /admin/product_api/product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/change/ HTTP/1.1" 302 0
+[2025-09-14 12:14:33,250] INFO django.server "GET /admin/product_api/product/ HTTP/1.1" 200 18617
+[2025-09-14 12:14:33,271] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 12:14:33,280] INFO django.server "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[2025-09-14 12:15:54,788] WARNING django.request Not Found: /api//product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update
+[2025-09-14 12:15:54,789] WARNING django.server "POST /api//product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update HTTP/1.1" 404 10563
+[2025-09-14 12:16:06,139] WARNING django.request Not Found: /api//product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/change
+[2025-09-14 12:16:06,140] WARNING django.server "POST /api//product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/change HTTP/1.1" 404 10563
+[2025-09-14 12:17:51,743] INFO django.server "POST /api/reservations/ HTTP/1.1" 201 209
+[2025-09-14 12:20:03,835] WARNING django.request Not Found: /api/product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/
+[2025-09-14 12:20:03,836] WARNING django.server "POST /api/product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/ HTTP/1.1" 404 10542
+[2025-09-14 12:20:26,352] WARNING django.request Not Found: /api/product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update
+[2025-09-14 12:20:26,353] WARNING django.server "POST /api/product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update HTTP/1.1" 404 10560
+[2025-09-14 12:20:35,767] WARNING django.request Not Found: /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update
+[2025-09-14 12:20:35,767] WARNING django.server "POST /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update HTTP/1.1" 404 10563
+[2025-09-14 12:20:58,533] INFO product_api.views Chapa payload: {'amount': '300.00', 'currency': 'ETB', 'email': 'oluwafemidojumo@gmail.com', 'first_name': 'seyi', 'last_name': 'jacob', 'tx_ref': 'wl-6781c6ea-1757852458', 'callback_url': 'https://0911b83c8cae.ngrok-free.app/chapa-webhook/', 'return_url': 'https://0911b83c8cae.ngrok-free.app/payment/success/', 'customization': {'title': 'WishlistPay', 'description': 'Payment for 2 Reserved items'}}
+[2025-09-14 12:20:58,551] ERROR django.request Internal Server Error: /api/reservation/checkout/
+[2025-09-14 12:20:58,552] ERROR django.server "POST /api/reservation/checkout/ HTTP/1.1" 500 335
+[2025-09-14 12:22:50,538] INFO product_api.views Chapa payload: {'amount': '300.00', 'currency': 'ETB', 'email': 'oluwafemidojumo@gmail.com', 'first_name': 'seyi', 'last_name': 'jacob', 'tx_ref': 'wl-6781c6ea-1757852570', 'callback_url': 'https://0911b83c8cae.ngrok-free.app/chapa-webhook/', 'return_url': 'https://0911b83c8cae.ngrok-free.app/payment/success/', 'customization': {'title': 'WishlistPay', 'description': 'Payment for 2 Reserved items'}}
+[2025-09-14 12:22:51,320] INFO django.server "POST /api/reservation/checkout/ HTTP/1.1" 200 268
+[2025-09-14 12:24:12,286] WARNING django.request Bad Request: /api/chapa-webhook/
+[2025-09-14 12:24:12,287] WARNING django.server "POST /api/chapa-webhook/ HTTP/1.1" 400 35
+[2025-09-14 12:26:15,867] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:26:16,786] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:26:18,361] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:26:18,817] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:26:41,061] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:26:41,582] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:27:12,168] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:27:12,831] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:27:22,606] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:27:23,095] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:27:24,645] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:27:25,277] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:27:32,992] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:27:33,429] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:27:46,291] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:27:47,594] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:27:49,976] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:27:50,384] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:27:56,178] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:27:56,618] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:28:01,228] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:28:01,695] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:28:13,574] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:28:14,079] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:28:17,687] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:28:18,296] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:28:20,809] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:28:21,218] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:28:23,729] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:28:24,146] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:33:12,273] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-14 12:33:12,831] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:33:15,376] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-14 12:33:15,783] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:35:28,539] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:35:29,766] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:35:35,518] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:35:36,227] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:35:39,823] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:35:40,310] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:36:38,371] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:36:38,931] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:36:43,579] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:36:44,006] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:38:09,959] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:38:10,597] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:38:12,121] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:38:12,554] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:38:15,225] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:38:15,641] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:38:19,212] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:38:19,656] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:38:29,398] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:38:29,876] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:38:31,487] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:38:31,881] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:38:49,995] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:38:50,553] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:39:26,373] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:39:26,934] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:39:28,263] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:39:28,658] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:39:52,987] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:39:53,504] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:39:54,782] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:39:55,185] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:39:56,454] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:39:56,832] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:01,196] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:01,583] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:06,067] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:06,467] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:12,908] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:13,315] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:15,639] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:16,038] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:18,342] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:18,771] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:21,288] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:21,697] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:29,192] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:29,618] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:31,949] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:32,346] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:33,613] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:33,999] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:36,293] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:36,885] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:38,153] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:38,781] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:41,095] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:41,497] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:42,784] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:43,197] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:44,500] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:44,918] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:46,346] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:46,728] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:40:59,372] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:40:59,850] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:41:14,563] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:41:15,066] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:41:16,360] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:41:16,740] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:41:23,446] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/urls.py changed, reloading.
+[2025-09-14 12:41:23,853] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:42:17,063] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:42:37,321] WARNING django.request Not Found: /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update/
+[2025-09-14 12:42:37,321] WARNING django.server "GET /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update/ HTTP/1.1" 404 10770
+[2025-09-14 12:46:14,536] ERROR product_api.views Payment verification failed for tx_ref wl-6781c6ea-1757852570: HTTPSConnectionPool(host='api.chapa.co', port=443): Max retries exceeded with url: /v1/transaction/verify/wl-6781c6ea-1757852570 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10442f6d0>: Failed to resolve 'api.chapa.co' ([Errno 8] nodename nor servname provided, or not known)"))
+[2025-09-14 12:46:14,538] ERROR django.request Internal Server Error: /api/verify/reserve_payment/
+[2025-09-14 12:46:14,538] ERROR django.server "POST /api/verify/reserve_payment/ HTTP/1.1" 500 327
+[2025-09-14 12:49:25,359] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:49:25,980] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:49:31,645] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:49:32,117] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:49:34,880] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:49:35,295] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:49:36,809] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:49:37,207] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:49:39,710] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:49:40,165] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:49:41,643] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:49:42,039] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:49:58,218] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:49:58,878] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:50:07,622] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:50:08,171] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:50:16,282] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 12:50:16,772] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 12:52:11,107] INFO product_api.views User oluwafemidojumo@gmail.com verified payment wl-6781c6ea-1757852570, order fecfe07f-75d7-4fed-8d5b-338e4b092417 created successfully.
+[2025-09-14 12:52:11,110] INFO django.server "POST /api/verify/reserve_payment/ HTTP/1.1" 200 160
+[2025-09-14 13:03:56,138] INFO django.server "GET /admin/product_api/product/ HTTP/1.1" 200 18374
+[2025-09-14 13:03:56,179] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 13:04:07,756] INFO django.server "GET /admin/product_api/account/ HTTP/1.1" 200 16084
+[2025-09-14 13:04:07,808] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 13:04:19,444] INFO django.server "GET /admin/product_api/account/00000000-0000-0000-0000-000000000001/change/ HTTP/1.1" 200 15682
+[2025-09-14 13:04:19,470] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 13:04:45,667] INFO django.server "GET /admin/product_api/account/ HTTP/1.1" 200 16084
+[2025-09-14 13:05:14,036] INFO django.server "GET /admin/product_api/account/00000000-0000-0000-0000-000000000001/change/ HTTP/1.1" 200 15682
+[2025-09-14 13:05:14,071] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 13:05:37,999] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:05:38,835] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:05:40,366] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:05:41,084] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:05:42,583] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:05:42,956] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:05:45,245] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:05:45,757] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:05:48,050] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:05:48,417] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:05:49,701] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:05:50,056] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:05:52,360] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:05:52,935] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:05:55,395] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:05:55,752] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:06:00,121] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:06:00,717] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:06:02,008] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:06:02,381] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:06:31,211] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:06:31,691] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:06:37,059] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:06:37,547] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:06:38,857] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:06:39,240] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:06:40,516] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:06:40,886] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:06:42,170] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:06:42,550] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:06:43,839] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:06:44,193] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:07:24,221] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-14 13:07:25,145] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 13:09:27,630] INFO django.server "GET /admin/product_api/product/ HTTP/1.1" 200 18374
+[2025-09-14 13:09:27,667] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 13:09:31,380] INFO django.server "GET /admin/product_api/product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/change/ HTTP/1.1" 200 20218
+[2025-09-14 13:09:31,418] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 13:09:46,932] INFO django.server "POST /admin/product_api/product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/change/ HTTP/1.1" 302 0
+[2025-09-14 13:09:46,953] INFO django.server "GET /admin/product_api/product/ HTTP/1.1" 200 18617
+[2025-09-14 13:09:46,972] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 13:09:52,450] INFO django.server "GET /admin/product_api/product/594fea93-5516-4815-b880-126f265d10af/change/ HTTP/1.1" 200 20232
+[2025-09-14 13:09:52,479] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 13:10:08,874] INFO django.server "POST /admin/product_api/product/594fea93-5516-4815-b880-126f265d10af/change/ HTTP/1.1" 302 0
+[2025-09-14 13:10:08,895] INFO django.server "GET /admin/product_api/product/ HTTP/1.1" 200 18619
+[2025-09-14 13:10:08,915] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 13:11:05,365] INFO django.server "POST /api/reservations/ HTTP/1.1" 201 209
+[2025-09-14 13:14:18,123] INFO django.server "GET /admin/product_api/product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/change/ HTTP/1.1" 200 20219
+[2025-09-14 13:14:18,161] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 13:14:21,202] INFO django.server "GET /admin/product_api/product/ HTTP/1.1" 200 18376
+[2025-09-14 13:16:16,402] WARNING django.request Bad Request: /api/reservations/
+[2025-09-14 13:16:16,403] WARNING django.server "POST /api/reservations/ HTTP/1.1" 400 117
+[2025-09-14 13:16:52,602] INFO django.server "POST /api/reservations/ HTTP/1.1" 201 209
+[2025-09-14 13:17:08,050] INFO django.server "POST /api/reservations/ HTTP/1.1" 201 209
+[2025-09-14 13:18:09,065] WARNING django.request Method Not Allowed: /api/reservations/
+[2025-09-14 13:18:09,066] WARNING django.server "DELETE /api/reservations/ HTTP/1.1" 405 43
+[2025-09-14 13:35:52,181] INFO django.server "GET /admin/product_api/reservation/ HTTP/1.1" 200 16983
+[2025-09-14 13:35:52,216] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 13:35:58,254] INFO django.server "GET /admin/product_api/reservation/ HTTP/1.1" 200 16983
+[2025-09-14 13:35:58,271] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 13:36:44,936] INFO django.server "DELETE /api/reservations/3c3c89d6-0170-45ce-8b5e-f85cf776362b/ HTTP/1.1" 204 0
+[2025-09-14 13:37:06,840] INFO django.server "GET /admin/product_api/reservation/ HTTP/1.1" 200 16477
+[2025-09-14 13:37:06,864] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 13:37:29,421] INFO django.server "GET /admin/product_api/product/ HTTP/1.1" 200 18376
+[2025-09-14 13:37:29,458] INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2025-09-14 13:38:26,412] WARNING django.request Not Found: /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/
+[2025-09-14 13:38:26,412] WARNING django.server "PUT /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/ HTTP/1.1" 404 10749
+[2025-09-14 13:38:40,977] WARNING django.request Not Found: /api/product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/
+[2025-09-14 13:38:40,977] WARNING django.server "PUT /api/product/03ae612c-9929-4ca1-b13b-3c739f96e6b7/ HTTP/1.1" 404 10746
+[2025-09-14 13:40:29,220] WARNING django.request Not Found: /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update/
+[2025-09-14 13:40:29,221] WARNING django.server "PUT /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update/ HTTP/1.1" 404 10770
+[2025-09-14 14:28:04,973] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:28:05,614] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:28:17,564] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:28:18,060] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:28:21,409] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:28:21,817] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:28:40,988] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:28:41,780] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:28:46,153] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:28:46,565] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:29:00,567] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:29:01,085] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:29:07,549] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:29:08,049] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:29:09,334] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:29:09,717] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:29:20,661] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:29:21,160] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:29:32,054] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:29:32,917] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:29:36,301] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:29:36,702] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:30:03,277] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:30:03,760] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:30:25,057] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:30:25,583] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:30:58,319] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:30:58,855] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:31:21,229] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:31:21,741] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:31:57,613] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:31:58,142] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:32:01,646] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:32:02,039] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:32:19,119] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:32:19,607] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:32:29,510] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:32:30,039] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:32:37,801] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:32:38,287] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:32:54,339] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:32:54,823] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:33:01,535] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:33:02,055] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:33:30,662] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:33:31,154] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:33:41,048] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:33:41,578] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:35:00,015] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:35:00,821] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:35:13,835] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:35:14,438] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:35:23,273] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:35:23,765] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:35:27,123] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:35:27,540] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:35:39,390] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:35:39,922] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:36:07,453] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:36:07,945] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:36:26,132] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:36:26,650] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:36:46,890] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:36:47,774] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:37:08,061] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:37:08,740] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:37:24,817] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:37:25,321] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:37:40,055] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:37:40,749] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:37:53,715] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:37:54,338] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:37:56,899] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:37:57,318] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:38:19,680] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:38:20,387] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:38:23,995] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:38:24,409] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:38:30,863] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:38:31,294] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-14 14:38:55,648] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
+[2025-09-14 14:38:56,382] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-17 16:07:59,105] INFO django.utils.autoreload Watching for file changes with StatReloader

@@ -23,8 +23,10 @@ django_celery_results==2.6.0
 django_chapa==1.4.0
 djangorestframework==3.16.1
 djangorestframework_simplejwt==5.5.1
+drf-yasg==1.21.10
 frozenlist==1.7.0
 idna==3.10
+inflection==0.5.1
 ipinfo==5.2.1
 kombu==5.5.4
 multidict==6.6.4
@@ -34,12 +36,15 @@ prompt_toolkit==3.0.52
 propcache==0.3.2
 PyJWT==2.10.1
 python-dateutil==2.9.0.post0
+pytz==2025.2
+PyYAML==6.0.2
 redis==6.4.0
 requests==2.32.5
 six==1.17.0
 sqlparse==0.5.3
 typing_extensions==4.15.0
 tzdata==2025.2
+uritemplate==4.2.0
 urllib3==2.5.0
 vine==5.1.0
 wcwidth==0.2.13

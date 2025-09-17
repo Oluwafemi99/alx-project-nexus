@@ -10,16 +10,6 @@ from django.db import transaction
 STOCK_THRESHOLD = 5
 
 
-@receiver(post_save, sender=Reservation)
-def reduce_stock_on_reservation(sender, instance, created, **kwargs):
-    if created:
-        product = instance.product
-        if product.stock_quantity < instance.quantity:
-            raise ValidationError("Not enough stock available")
-        product.stock_quantity -= instance.quantity
-        product.save()
-
-
 @receiver(pre_save, sender=Reservation)
 def block_if_stock_low(sender, instance, **kwargs):
     product = instance.product
@@ -51,6 +41,7 @@ def handle_order_created(sender, instance, created, **kwargs):
         )
 
 
+"""" # handled atomically in views
 @receiver(post_save, sender=OrderItem)
 def reduce_stock_on_order_item_creation(sender, instance, created, **kwargs):
     if created:
@@ -63,3 +54,4 @@ def reduce_stock_on_order_item_creation(sender, instance, created, **kwargs):
         else:
             print(f"Not enough stock for {product.name} (requested {instance.quantity})")
 
+"""

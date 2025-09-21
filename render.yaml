@@ -86,13 +86,12 @@ services:
           type: redis
           property: connectionString
 
+  # Shared Redis
+  - type: redis
+    name: alx-project-nexus-redis
+    ipAllowList: []  # private connection
+
 databases:
   - name: alx-project-nexus-db
     databaseName: nexusdb
     user: nexususer
-
-services:
-  # Shared Redis (used for both Celery broker + Django cache)
-  - type: redis
-    name: alx-project-nexus-redis
-    ipAllowList: []  # private connection

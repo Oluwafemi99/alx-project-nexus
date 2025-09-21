@@ -135,11 +135,10 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 
 class WishlistSerializer(serializers.ModelSerializer):
-    product_details = ProductSerializer(source='product', read_only=True)
 
     class Meta:
         model = Wishlist
-        fields = ['wishlist_id', 'user', 'product', 'product_details',
+        fields = ['wishlist_id', 'user', 'product',
                   'added_at', 'quantity']
         read_only_fields = ['user', 'added_at']
 

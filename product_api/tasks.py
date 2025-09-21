@@ -7,13 +7,16 @@ from .models import DailySales, Account
 from datetime import date
 
 
+# Task to Alert Low Stock by Email
 @shared_task(bind=True, max_retries=3, default_retry_delay=60)  # 3 retries, 60s delay
 def send_low_stock_email(self, product_name, stock_quantity, recipient):
     subject = f"Low Stock Alert: {product_name}"
     message = f"Only {stock_quantity} units left for '{product_name}'. Please restock soon."
 
     try:
-        send_mail(subject, message, 'noreply@yourdomain.com', [recipient], fail_silently=False)
+        send_mail(
+            subject, message, 'noreply@yourdomain.com',
+            [recipient], fail_silently=False)
     except SMTPException as exc:
         # Retry the task if email fails
         raise self.retry(exc=exc)
@@ -22,6 +25,7 @@ def send_low_stock_email(self, product_name, stock_quantity, recipient):
 SENSITIVE_PATHS = ['/admin', '/login']
 
 
+# Task to Flag Suspicious IP
 @shared_task
 def flag_suspicious_ips():
     one_hour_ago = now() - timedelta(hours=1)
@@ -54,6 +58,7 @@ def flag_suspicious_ips():
             )
 
 
+# Task to Send order confirmation email
 @shared_task
 def send_order_confirmation_email(order_id, user_email):
     subject = "Order Confirmation"
@@ -67,10 +72,12 @@ def send_order_confirmation_email(order_id, user_email):
     )
 
 
+# Task to save Daily sales and Reset Account for a New Day
 @shared_task
 def save_daily_sales_task():
     try:
-        account = Account.objects.get(account_id="00000000-0000-0000-0000-000000000001")
+        account = Account.objects.get(
+            account_id="00000000-0000-0000-0000-000000000001")
     except Account.DoesNotExist:
         return "Global account not found"
 

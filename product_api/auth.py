@@ -20,22 +20,27 @@ logger = logging.getLogger(__name__)
 Users = get_user_model()
 
 
-# Simple JWT authenticatin for Users registration Login and Logout
+# Simple JWT authentication for Users registration Login and Logout
+# Token Obtain View
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
     permission_classes = [permissions.AllowAny]
 
-    @method_decorator(ratelimit(key='ip', rate='5/m', method='POST', block=True))
-    @method_decorator(ratelimit(key='user_or_ip', rate='5/m', method='POST', block=True))
+    @method_decorator(ratelimit(key='ip', rate='5/m',
+                                method='POST', block=True))
+    @method_decorator(ratelimit(key='user_or_ip', rate='5/m',
+                                method='POST', block=True))
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
 
+# Refresh View
 class CustomTokenRefreshView(TokenRefreshView):
     serializer_class = CustomTokenRefreshSerializer
     permission_classes = [permissions.AllowAny]
 
 
+# Logout View
 class LogoutView(APIView):
     permission_classes = [permissions.AllowAny]
 
@@ -49,9 +54,11 @@ class LogoutView(APIView):
             if user_id:
                 try:
                     user = Users.objects.get(pk=user_id)
-                    logger.info(f"User {user.username} logged out successfully")
+                    logger.info(
+                        f"User {user.username} logged out successfully")
                 except Users.DoesNotExist:
-                    logger.warning(f"Logout attempted with unknown user_id: {user_id}")
+                    logger.warning(
+                        f"Logout attempted with unknown user_id: {user_id}")
             else:
                 logger.warning("Token missing user_id")
 
@@ -61,9 +68,11 @@ class LogoutView(APIView):
 
         except Exception as e:
             logger.error(f"Logout failed: {e}")
-            return Response({"detail": "Invalid token"}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"detail": "Invalid token"},
+                            status=status.HTTP_400_BAD_REQUEST)
 
 
+# Register View
 class RegisterView(generics.CreateAPIView):
     queryset = Users.objects.all()
     serializer_class = UserSerializer

@@ -27,4 +27,4 @@ class Command(BaseCommand):
         account.total_stock_sold = 0
         account.save()
 
-        self.stdout.write(f"Saved daily sales for {date.today()} and reset account successfully.")
+        self.stdout.write(f"Saved Daily Sales for {date.today()} and reset Account Successfully.")

@@ -31,6 +31,8 @@ from django.utils.decorators import method_decorator
 import logging
 from decimal import Decimal
 from django.db import transaction
+from django.shortcuts import get_object_or_404
+from rest_framework import status
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +44,7 @@ class ProductCreateView(generics.CreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+        serializer.save(user_id=self.request.user)
 
 
 # product List View
@@ -51,7 +53,7 @@ class ProductCreateView(generics.CreateAPIView):
 class ProductListView(generics.ListAPIView):
     serializer_class = ProductSerializer
     pagination_class = ProductPagination
-    permission_classes = [permissions.IsAuthenticated, permissions.IsAdminUser]
+    permission_classes = [permissions.AllowAny]
     filterset_class = ProductFilter
 
     def get_queryset(self):
@@ -61,7 +63,7 @@ class ProductListView(generics.ListAPIView):
 class ProductSearchView(generics.ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter,
                        filters.OrderingFilter]
     search_fields = ['name', 'description', 'category__name']
@@ -72,17 +74,17 @@ class ProductSearchView(generics.ListAPIView):
 class ProductDetailsView(generics.RetrieveAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    permission_classes = [permissions.IsAuthenticated, permissions.IsAdminUser]
+    permission_classes = [permissions.AllowAny]
 
 
 class ProductUpdateView(generics.UpdateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAdminUser]
 
     def perform_update(self, serializer):
         product = self.get_object()
-        if product.user != self.request.user:
+        if product.user_id != self.request.user:
             raise PermissionDenied('You are not authorized to update this product.')
         serializer.save()
 
@@ -90,7 +92,7 @@ class ProductUpdateView(generics.UpdateAPIView):
 class ProductDeleteView(generics.DestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAdminUser]
 
     def perform_destroy(self, instance):
         if instance.user != self.request.user:
@@ -115,7 +117,7 @@ class ProductImageListView(generics.ListAPIView):
 class CategoryView(viewsets.ModelViewSet):
     queryset = Category.objects.all().order_by('category_id')
     serializer_class = CategorySerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter,
                        filters.OrderingFilter]
     search_fields = ['name', 'description']
@@ -130,7 +132,7 @@ class ReviewsCreateView(generics.CreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+        serializer.save(user_id=self.request.user)
 
 
 class ReviewsListView(generics.ListAPIView):
@@ -418,12 +420,14 @@ class RequestLogListView(generics.ListAPIView):
     permission_classes = [permissions.IsAdminUser]
 
 
+# SuspiciousIPList View
 class SuspiciousIPListView(generics.ListAPIView):
     queryset = SuspiciousIP.objects.all()
     serializer_class = SupiciousIPSerializer
     permission_classes = [permissions.IsAdminUser]
 
 
+# Reserve Payment Checkout View
 class ReservationCheckoutView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -490,6 +494,7 @@ class ReservationCheckoutView(APIView):
                 {'error': f'Payment initiation failed: {str(e)}'}, status=500)
 
 
+# Verify Reserve payment view
 @csrf_exempt
 @api_view(['POST'])
 @permission_classes([permissions.AllowAny])
@@ -601,3 +606,28 @@ def verify_Reserve_payment(request):
         logger.error(
             f"Payment verification failed for tx_ref {tx_ref}: {str(e)}")
         return Response({'error': str(e)}, status=500)
+
+
+class RelatedProductViews(generics.GenericAPIView):
+    permission_classes = [permissions.AllowAny]
+    serializer_class = ProductSerializer
+
+    def get(self, request, pk):
+        # fetch the current product
+        product = get_object_or_404(Product, pk=pk)
+
+        # Get related products from the same category (excluding self)
+        related_product = Product.objects.filter(
+            category=product.category).exclude(pk=product.pk)[:6]
+
+        if not related_product.exists():
+            return Response(
+                {
+                    "message": "No related products found in this category.",
+                    "results": []
+                },
+                status=status.HTTP_200_OK
+            )
+
+        serializer = self.get_serializer(related_product, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)

@@ -4,6 +4,7 @@ import uuid
 
 
 # Create your models here.
+# User Model
 class Users(AbstractUser):
     user_id = models.UUIDField(
         primary_key=True, editable=False, default=uuid.uuid4, db_index=True)
@@ -13,6 +14,7 @@ class Users(AbstractUser):
         return self.username
 
 
+# Category Model
 class Category(models.Model):
     category_id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, db_index=True)
@@ -23,6 +25,7 @@ class Category(models.Model):
         return self.name
 
 
+# Product Model
 class Product(models.Model):
     product_id = models.UUIDField(
         primary_key=True, editable=False, default=uuid.uuid4, db_index=True)
@@ -45,6 +48,7 @@ class Product(models.Model):
         return self.name
 
 
+# Reviews Model
 class Reviews(models.Model):
     reviews_id = models.UUIDField(
         primary_key=True, editable=False, default=uuid.uuid4, db_index=True)
@@ -60,6 +64,7 @@ class Reviews(models.Model):
         return f'{self.product_id}: {self.ratings}'
 
 
+# ProductImage Model
 class ProductImage(models.Model):
     product_image_id = models.UUIDField(
         primary_key=True, editable=False, db_index=True, default=uuid.uuid4)
@@ -68,6 +73,7 @@ class ProductImage(models.Model):
     image = models.ImageField(upload_to='product_images/')
 
 
+# Wishlist Model
 class Wishlist(models.Model):
     wishlist_id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, db_index=True)
@@ -86,6 +92,7 @@ class Wishlist(models.Model):
         return f"{self.user.username} → {self.product.name}"
 
 
+# Reservation Model
 class Reservation(models.Model):
     reservation_id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, db_index=True)
@@ -100,6 +107,7 @@ class Reservation(models.Model):
         return f"{self.user.username} reserved {self.quantity} of {self.product.name}"
 
 
+# Transaction Model
 class Transaction(models.Model):
     tx_ref = models.CharField(max_length=100, unique=True)
     user = models.ForeignKey(Users, on_delete=models.CASCADE)
@@ -108,11 +116,13 @@ class Transaction(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 
+# Account Model
 class Account(models.Model):
     account_id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, db_index=True
     )
-    total_sales_amount = models.DecimalField(max_digits=12, decimal_places=2, default=0)
+    total_sales_amount = models.DecimalField(
+        max_digits=12, decimal_places=2, default=0)
     total_transactions = models.PositiveIntegerField(default=0)
     total_stock_sold = models.PositiveIntegerField(default=0)
     updated_at = models.DateTimeField(auto_now=True)
@@ -121,9 +131,12 @@ class Account(models.Model):
         return f"Sales: {self.total_sales_amount}, Transactions: {self.total_transactions}, Stock Sold: {self.total_stock_sold}"
 
 
+# Order Model
 class Order(models.Model):
-    order_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    user = models.ForeignKey(Users, on_delete=models.CASCADE, related_name='orders')
+    order_id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(
+        Users, on_delete=models.CASCADE, related_name='orders')
     tx_ref = models.CharField(max_length=100, unique=True)
     total_amount = models.DecimalField(max_digits=10, decimal_places=2)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -132,10 +145,12 @@ class Order(models.Model):
         return f'{self.user}: {self.order_id}'
 
 
+# OrderItem Model
 class OrderItem(models.Model):
     orderitem_id = models.UUIDField(primary_key=True, default=uuid.uuid4,
                                     db_index=True, editable=False)
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
+    order = models.ForeignKey(
+        Order, on_delete=models.CASCADE, related_name='items')
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     quantity = models.PositiveIntegerField(default=1)
@@ -144,6 +159,7 @@ class OrderItem(models.Model):
         return self.order
 
 
+# RequestLog Model
 class RequestLog(models.Model):
     ip_address = models.GenericIPAddressField()
     timestamp = models.DateTimeField()
@@ -155,6 +171,7 @@ class RequestLog(models.Model):
         return f"{self.ip_address} at {self.timestamp} -> {self.path}"
 
 
+# BlockedIp Model
 class BlockedIP(models.Model):
     ip_address = models.GenericIPAddressField()
 
@@ -162,6 +179,7 @@ class BlockedIP(models.Model):
         return self.ip_address
 
 
+# Model For Suspicious Ip logged
 class SuspiciousIP(models.Model):
     ip_address = models.GenericIPAddressField()
     reason = models.TextField()
@@ -170,12 +188,15 @@ class SuspiciousIP(models.Model):
         return f'{self.ip_address}, {self.reason}'
 
 
+# Model for Daily Sold Goods
 class DailySales(models.Model):
-    daily_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    daily_id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False)
     date = models.DateField(auto_now_add=True)
-    total_sales_amount = models.DecimalField(max_digits=12, decimal_places=2, default=0)
+    total_sales_amount = models.DecimalField(
+        max_digits=12, decimal_places=2, default=0)
     total_transactions = models.PositiveIntegerField(default=0)
     total_stock_sold = models.PositiveIntegerField(default=0)
 
     def __str__(self):
-        return f"DailySales {self.date}"
+        return f"Total Sales for {self.date} is {self.total_sales_amount}"

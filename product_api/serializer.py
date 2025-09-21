@@ -2,15 +2,19 @@ from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.exceptions import InvalidToken, TokenError
-from rest_framework_simplejwt.settings import api_settings
 from .models import (Product, Reviews, ProductImage,
                      Category, Wishlist, Reservation,
                      OrderItem, Order, Account, DailySales,
                      RequestLog, BlockedIP, SuspiciousIP)
 from PIL import Image
-from rest_framework_simplejwt.serializers import TokenObtainPairSerializer, TokenRefreshSerializer
+from rest_framework_simplejwt.serializers import (TokenObtainPairSerializer,
+                                                  TokenRefreshSerializer)
 
 Users = get_user_model()
+
+""""
+Serializer for Models
+"""
 
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
@@ -28,7 +32,8 @@ class CustomTokenRefreshSerializer(TokenRefreshSerializer):
         try:
             token = RefreshToken(refresh)
         except TokenError as e:
-            raise InvalidToken({"detail": "Invalid refresh token", "error": str(e)})
+            raise InvalidToken(
+                {"detail": "Invalid refresh token", "error": str(e)})
 
         # Create new access token
         access_token = str(token.access_token)
@@ -69,21 +74,28 @@ class ProductImageSerializer(serializers.ModelSerializer):
 
 
 class ProductSerializer(serializers.ModelSerializer):
-    category = CategorySerializer()
+    # Accept UUID instead of full object
+    category = serializers.PrimaryKeyRelatedField(
+        queryset=Category.objects.all()
+    )
+    # User will be set automatically in perform_create
+    user_id = serializers.UUIDField(read_only=True)
     product_images = ProductImageSerializer(many=True, read_only=True)
 
     class Meta:
         model = Product
-        fields = '__all__'
-
-    def validate(self, data):
-        product = data['product']
-        quantity = data['quantity']
-        if product.stock_quantity < quantity:
-            raise serializers.ValidationError(
-                f"Only {product.stock_quantity} units of '{product.name}' are available."
-            )
-        return data
+        fields = [
+            "product_id",
+            "name",
+            "description",
+            "price",
+            "stock_quantity",
+            "image_url",
+            "category",
+            "user_id",
+            "product_images"
+        ]
+        read_only_fields = ("product_id", "created_at", "user_id")
 
     def validate_price(self, value):
         if value <= 0:
@@ -93,6 +105,7 @@ class ProductSerializer(serializers.ModelSerializer):
     def validate_name(self, value):
         if not value.strip():
             raise serializers.ValidationError('Error: Name cannot be blank')
+        return value
 
     def validate_stock_quantity(self, value):
         if value < 0:
@@ -185,16 +198,19 @@ class OrderSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Order
-        fields = ['order_id', 'user', 'tx_ref', 'total_amount', 'created_at', 'items']
+        fields = ['order_id', 'user', 'tx_ref',
+                  'total_amount', 'created_at', 'items']
 
     def validate_total_amount(self, value):
         if value <= 0:
-            raise serializers.ValidationError("Total amount must be greater than zero.")
+            raise serializers.ValidationError(
+                "Total amount must be greater than zero.")
         return value
 
     def validate_tx_ref(self, value):
         if Order.objects.filter(tx_ref=value).exists():
-            raise serializers.ValidationError("Transaction reference already exists.")
+            raise serializers.ValidationError(
+                "Transaction reference already exists.")
         return value
 
 

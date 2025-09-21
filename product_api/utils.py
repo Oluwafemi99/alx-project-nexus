@@ -4,6 +4,7 @@ import logging
 from django_redis import get_redis_connection
 
 
+# Caching All products View at Low level
 def get_all_products():
     products = cache.get('all_products')
     if products is None:
@@ -15,6 +16,7 @@ def get_all_products():
 logger = logging.getLogger(__name__)
 
 
+# Logging Redis Cache Metrics
 def get_redis_cache_metrics():
     try:
         redis_con = get_redis_connection('default')

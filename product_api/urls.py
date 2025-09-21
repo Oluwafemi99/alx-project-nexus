@@ -11,7 +11,8 @@ from .views import (
     OrderDetailView, OrderItemListCreateView, ReservationViewSet,
     ProductImageListView, verify_payment, GlobalAccountListView,
     DailySalesListView, BlockedIPListView, RequestLogListView,
-    SuspiciousIPListView, ReservationCheckoutView, verify_Reserve_payment)
+    SuspiciousIPListView, ReservationCheckoutView, verify_Reserve_payment,
+    RelatedProductViews)
 from .auth import (CustomTokenObtainPairView, CustomTokenRefreshView,
                    LogoutView, RegisterView)
 
@@ -67,4 +68,7 @@ urlpatterns = [
     path('admin/suspicious-ip/', SuspiciousIPListView.as_view(), name='suspicious-ip'),
     path('admin/blocked-ip/', BlockedIPListView.as_view(), name='blocked-ip'),
     path('admin/request-log/', RequestLogListView.as_view(), name='request-log'),
+
+    # Related Product View
+    path("products/<uuid:pk>/related/", RelatedProductViews.as_view(), name="related-products"),
 ]

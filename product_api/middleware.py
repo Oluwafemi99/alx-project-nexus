@@ -35,7 +35,8 @@ class RequestLoggingMiddleware:
                     'country': details.country_name or '',
                     'city': details.city or ''
                 }
-                cache.set(cache_key, geo_data, timeout=86400)  # Cache for 24 hours
+                # Cache for 24 hours
+                cache.set(cache_key, geo_data, timeout=86400)
             except Exception:
                 geo_data = {'country': '', 'city': ''}
 

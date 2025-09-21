@@ -2,6 +2,7 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 
 
+# Product Pagination
 class ProductPagination(PageNumberPagination):
     page_size = 20
     page_size_query_param = 'page_size'
@@ -16,6 +17,7 @@ class ProductPagination(PageNumberPagination):
         })
 
 
+# Reviews Pagination
 class ReviewsPagination(PageNumberPagination):
     page_size = 20
     page_size_query_param = 'page_size'
@@ -30,6 +32,7 @@ class ReviewsPagination(PageNumberPagination):
         })
 
 
+# Category Pagination
 class CategoryPagination(PageNumberPagination):
     page_size = 20
     page_size_query_param = 'page_size'

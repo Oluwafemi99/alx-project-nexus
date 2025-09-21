@@ -4879,3 +4879,1070 @@ kombu.exceptions.OperationalError: [Errno 8] nodename nor servname provided, or 
 [2025-09-14 14:38:55,648] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/views.py changed, reloading.
 [2025-09-14 14:38:56,382] INFO django.utils.autoreload Watching for file changes with StatReloader
 [2025-09-17 16:07:59,105] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-18 13:09:51,185] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-20 12:14:39,613] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-20 12:14:56,065] WARNING django.request Not Found: /favicon.ico
+[2025-09-20 12:14:56,066] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2600
+[2025-09-20 12:15:02,637] WARNING django.request Not Found: /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update/
+[2025-09-20 12:15:02,637] WARNING django.server "GET /api/products/03ae612c-9929-4ca1-b13b-3c739f96e6b7/update/ HTTP/1.1" 404 10979
+[2025-09-20 12:17:37,149] INFO django.server "GET /api/admin/daily-sales/ HTTP/1.1" 200 150
+[2025-09-21 08:34:58,593] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 08:36:19,320] INFO django.server "GET /api/admin/daily-sales/ HTTP/1.1" 200 294
+[2025-09-21 08:36:46,339] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 08:36:50,931] INFO django.server "GET /api/admin/daily-sales/ HTTP/1.1" 200 438
+[2025-09-21 08:59:09,263] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 08:59:09,889] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 08:59:15,336] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 08:59:15,721] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 08:59:18,072] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 08:59:18,501] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 08:59:23,118] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 08:59:23,555] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 08:59:26,084] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 08:59:26,494] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 08:59:29,086] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 08:59:29,499] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 08:59:58,030] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 08:59:58,579] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:00:35,442] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:00:35,968] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:02:31,232] WARNING django.request Unauthorized: /api/token/
+[2025-09-21 09:02:31,232] WARNING django.server "POST /api/token/ HTTP/1.1" 401 63
+[2025-09-21 09:03:16,471] WARNING django.request Unauthorized: /api/token/refresh/
+[2025-09-21 09:03:16,472] WARNING django.server "POST /api/token/refresh/ HTTP/1.1" 401 86
+[2025-09-21 09:03:27,117] WARNING django.request Unauthorized: /api/token/refresh/
+[2025-09-21 09:03:27,118] WARNING django.server "POST /api/token/refresh/ HTTP/1.1" 401 86
+[2025-09-21 09:08:03,666] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:08:04,281] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:08:05,862] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:08:06,270] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:08:07,787] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:08:08,182] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:08:10,705] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:08:11,119] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:08:13,728] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:08:14,184] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:08:17,729] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:08:18,136] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:08:26,839] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:08:27,256] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:08:30,828] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:08:31,247] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:08:37,940] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:08:38,351] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:08:46,056] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:08:46,477] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:08:48,029] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:08:48,433] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:09:21,112] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:09:21,640] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:09:24,178] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:09:24,651] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:09:27,188] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:09:27,600] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:09:32,232] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:09:32,641] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:09:44,522] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:09:44,932] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:09:53,693] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:09:54,135] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:09:57,703] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:09:58,128] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:10:14,228] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:10:14,659] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:10:16,223] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:10:16,615] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:10:21,223] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:10:21,646] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:10:26,270] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:10:26,687] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:10:46,884] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:10:47,375] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:10:57,181] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:10:57,688] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:11:02,079] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:11:02,499] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:11:05,017] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:11:05,433] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:11:12,138] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:11:12,552] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:11:19,253] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/auth.py changed, reloading.
+[2025-09-21 09:11:19,661] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:12:04,826] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/middleware.py changed, reloading.
+[2025-09-21 09:12:05,347] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:12:10,006] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/middleware.py changed, reloading.
+[2025-09-21 09:12:10,431] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:12:34,741] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 09:12:35,236] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:12:39,854] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 09:12:40,278] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:12:52,151] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 09:12:52,694] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:12:57,322] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 09:12:57,749] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:13:00,269] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 09:13:00,708] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:13:11,532] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 09:13:11,957] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:13:19,391] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 09:13:19,835] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:13:34,886] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 09:13:35,401] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:13:49,393] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 09:13:49,887] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:13:58,693] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 09:13:59,179] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:14:56,847] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 09:14:57,404] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:15:01,806] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 09:15:02,204] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:15:19,323] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 09:15:19,819] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:15:28,596] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 09:15:29,106] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:15:42,990] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 09:15:43,604] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:16:01,662] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 09:16:02,152] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:16:06,779] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 09:16:07,194] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:16:17,046] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 09:16:17,464] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:16:48,064] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 09:16:48,586] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:17:06,705] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:17:07,223] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:17:12,889] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:17:13,371] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:17:37,846] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:17:38,323] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:17:42,936] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:17:43,354] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:17:46,914] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:17:47,343] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:18:18,992] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:18:19,490] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:18:23,098] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:18:23,511] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:18:32,330] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:18:32,752] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:18:34,231] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:18:34,632] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:18:46,547] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:18:46,993] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:18:52,655] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:18:53,055] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:18:55,582] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:18:55,986] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:18:59,540] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:18:59,966] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:19:09,771] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:19:10,189] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:19:20,025] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:19:20,522] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:19:22,017] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:19:22,425] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:19:25,997] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:19:26,430] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:19:31,046] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:19:31,449] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:19:33,979] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:19:34,397] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:19:39,047] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:19:39,465] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:19:45,123] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:19:45,538] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:19:48,111] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:19:48,520] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:19:51,061] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:19:51,477] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:19:54,049] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:19:54,448] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:19:55,952] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:19:56,355] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:20:04,100] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:20:04,551] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:20:10,243] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:20:10,653] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:20:15,264] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:20:15,668] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:20:18,246] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:20:18,656] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:20:20,161] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:20:20,555] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:20:22,054] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:20:22,460] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:20:24,010] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:20:24,404] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:20:49,920] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:20:50,394] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:20:52,936] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:20:53,363] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:20:59,018] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:20:59,478] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:21:00,960] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:21:01,368] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:21:04,950] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:21:05,382] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:21:10,001] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:21:10,463] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:21:13,000] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:21:13,405] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:21:36,783] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:21:37,275] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:21:42,921] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:21:43,316] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:21:55,148] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:21:55,658] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:22:02,372] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:22:02,768] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:22:08,405] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:22:08,867] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:22:12,423] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:22:12,862] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:22:18,491] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:22:18,910] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:22:20,401] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/signals.py changed, reloading.
+[2025-09-21 09:22:20,814] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:22:53,565] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 09:22:54,070] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:24:54,381] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 09:24:54,877] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 09:25:02,598] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 09:25:03,057] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:06,456] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:07,105] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:08,627] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:09,054] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:11,609] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:12,021] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:13,537] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:13,944] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:16,527] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:16,945] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:18,500] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:18,929] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:22,514] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:22,933] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:26,529] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:26,941] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:31,513] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:31,912] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:39,568] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:39,987] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:43,549] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:43,956] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:45,441] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:45,924] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:53,614] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:54,057] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:57,623] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:58,047] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:06:59,582] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:06:59,993] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:07:01,492] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:07:01,936] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:07:04,470] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:07:04,918] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:07:07,462] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:07:07,874] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:07:10,393] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:07:10,804] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:07:15,437] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:07:15,860] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:07:17,398] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:07:17,788] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:07:20,098] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:07:20,618] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:07:22,105] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:07:22,540] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:07:31,269] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:07:31,708] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:07:37,321] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:07:37,753] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:07:45,468] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:07:45,891] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:07:54,304] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:07:54,704] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:07:57,251] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:07:57,650] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:08:03,303] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:08:03,755] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:08:14,525] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:08:14,952] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:08:20,563] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:08:21,037] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:08:22,540] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:08:22,954] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:08:24,456] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:08:24,846] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:08:31,510] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:08:31,936] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:08:45,890] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:08:46,387] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:08:47,901] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:08:48,298] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:08:49,796] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:08:50,192] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:08:52,741] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:08:53,150] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:08:56,708] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:08:57,333] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:08:58,840] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:08:59,240] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:09:03,933] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:09:05,064] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:09:09,699] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:09:10,095] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:09:16,722] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:09:17,184] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:09:23,872] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:09:24,366] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:09:25,866] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:09:26,294] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:09:34,990] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:09:35,413] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:09:42,102] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:09:42,524] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:09:44,026] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:09:44,425] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:09:48,069] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:09:48,629] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:09:53,233] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:09:53,686] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:09:55,172] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:09:55,599] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:09:58,161] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:09:58,615] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:10:06,310] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:10:06,774] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:10:11,420] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:10:11,845] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:10:14,422] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:10:14,873] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:10:17,441] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:10:17,856] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:10:21,478] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/models.py changed, reloading.
+[2025-09-21 10:10:21,905] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:10:54,653] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:10:55,160] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:10:59,795] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:11:00,217] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:11:01,763] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:11:02,155] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:11:04,677] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:11:05,140] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:11:06,643] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:11:07,125] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:11:08,616] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:11:09,022] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:11:57,476] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:11:58,009] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:12:01,616] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:12:02,025] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:12:07,714] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:12:08,165] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:12:09,708] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:12:10,117] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:12:12,646] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:12:13,108] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:12:15,674] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:12:16,086] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:12:41,604] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:12:42,108] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:12:46,707] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:12:47,129] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:12:49,687] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:12:50,103] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:13:06,206] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:13:06,705] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:13:48,907] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:13:49,432] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:15:48,910] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:15:49,465] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:16:13,932] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:16:14,414] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:26:30,181] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:26:30,744] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:32:14,239] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:32:14,825] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:32:26,739] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:32:27,250] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:32:28,764] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:32:29,196] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:32:37,959] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:32:38,374] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:32:41,936] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:32:42,355] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:32:43,854] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:32:44,275] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:32:46,806] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:32:47,222] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:32:59,098] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:32:59,611] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:33:02,151] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:33:02,586] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:33:04,090] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:33:04,523] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:33:07,114] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:33:07,556] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:33:10,091] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:33:10,497] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:33:14,077] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:33:14,505] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:33:17,034] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/pagination.py changed, reloading.
+[2025-09-21 10:33:17,446] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:37:47,719] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:37:48,279] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:37:50,876] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:37:51,292] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:38:08,423] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:38:08,955] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:38:19,824] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:38:20,392] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:38:21,929] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:38:22,339] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:38:23,883] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:38:24,289] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:38:29,703] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:38:30,103] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:38:38,622] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:38:39,052] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:39:07,709] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:39:08,264] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:39:10,827] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:39:11,231] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:39:16,865] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:39:17,300] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:39:20,899] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:39:21,303] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:39:23,846] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:39:24,253] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:39:29,882] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:39:30,308] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:39:31,900] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:39:32,325] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:39:33,811] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:39:34,223] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:39:35,710] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:39:36,104] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:39:56,417] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:39:56,905] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:40:00,498] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:40:00,922] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:40:03,441] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py changed, reloading.
+[2025-09-21 10:40:03,866] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:44:19,579] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:44:20,209] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:44:21,737] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:44:22,127] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:45:49,195] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:45:49,738] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:45:52,329] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:45:52,749] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:45:54,244] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:45:54,666] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:45:56,177] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:45:56,588] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:45:58,112] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:45:58,532] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:46:06,235] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:46:06,639] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:46:10,209] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:46:10,619] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:46:23,562] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:46:24,073] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:46:25,603] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:46:26,068] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:46:29,644] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:46:30,048] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:46:31,569] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:46:31,975] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:46:33,474] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:46:33,866] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:46:37,441] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:46:37,885] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:46:39,382] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:46:39,780] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:46:53,801] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:46:54,283] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:47:42,955] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:47:43,494] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:47:49,134] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:47:49,541] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:47:51,045] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:47:51,441] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:47:52,978] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:47:53,382] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:47:54,883] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:47:55,271] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:48:02,033] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:48:02,441] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:49:58,580] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:49:59,155] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:50:00,680] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:50:01,086] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:50:05,717] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:50:06,177] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:50:29,548] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:50:30,043] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:51:00,732] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:51:01,252] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:51:06,928] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:51:07,339] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:51:08,856] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:51:09,270] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:51:12,876] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:51:13,283] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 10:52:02,698] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 10:52:03,236] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:04:52,837] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:04:53,582] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:06:27,376] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:06:27,853] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:06:30,254] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:06:30,527] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:06:44,356] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:06:44,727] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:06:46,117] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:06:46,377] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:06:52,906] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:06:53,195] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:06:57,612] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:06:57,882] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:07:02,353] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:07:02,659] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:07:03,999] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:07:04,257] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:07:05,558] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:07:05,811] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:07:08,149] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:07:08,480] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:07:10,853] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:07:11,145] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:07:12,495] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:07:12,760] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:07:14,094] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:07:14,380] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:07:15,702] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:07:16,017] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:07:20,468] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:07:20,730] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:07:30,312] INFO django.utils.autoreload /Users/Pro/Downloads/alx-project-nexus/product_api/tasks.py changed, reloading.
+[2025-09-21 11:07:30,615] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-09-21 11:29:57,860] WARNING django.request Bad Request: /api/categories/
+[2025-09-21 11:29:58,012] WARNING django.request Forbidden: /api/products/
+[2025-09-21 11:29:58,409] INFO product_api.auth New user registered: 
+[2025-09-21 11:31:33,494] WARNING django.request Bad Request: /api/categories/
+[2025-09-21 11:31:33,644] WARNING django.request Forbidden: /api/products/
+[2025-09-21 11:31:34,026] INFO product_api.auth New user registered: 
+[2025-09-21 11:35:51,809] WARNING django.request Unauthorized: /api/categories/
+[2025-09-21 11:35:51,957] WARNING django.request Unauthorized: /api/products/
+[2025-09-21 11:35:52,338] INFO product_api.auth New user registered: test@example.com
+[2025-09-21 11:36:12,438] WARNING django.request Unauthorized: /api/categories/
+[2025-09-21 11:36:12,588] WARNING django.request Unauthorized: /api/products/
+[2025-09-21 11:36:12,966] INFO product_api.auth New user registered: test@example.com
+[2025-09-21 11:40:19,253] WARNING django.request Unauthorized: /api/categories/
+[2025-09-21 11:40:19,404] WARNING django.request Unauthorized: /api/products/
+[2025-09-21 11:40:19,786] INFO product_api.auth New user registered: 
+[2025-09-21 11:42:50,497] WARNING django.request Bad Request: /api/categories/
+[2025-09-21 11:42:50,726] WARNING django.request Forbidden (Permission denied): /api/token/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django_ratelimit/decorators.py", line 27, in _wrapped
+    return fn(request, *args, **kw)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django_ratelimit/decorators.py", line 26, in _wrapped
+    raise (import_string(cls) if isinstance(cls, str) else cls)()
+django_ratelimit.exceptions.Ratelimited
+[2025-09-21 11:42:50,803] WARNING django.request Forbidden (Permission denied): /api/token/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django_ratelimit/decorators.py", line 26, in _wrapped
+    raise (import_string(cls) if isinstance(cls, str) else cls)()
+django_ratelimit.exceptions.Ratelimited
+[2025-09-21 11:42:50,884] INFO product_api.auth New user registered: 
+[2025-09-21 11:47:14,707] WARNING django.request Forbidden: /api/products/
+[2025-09-21 11:47:14,783] WARNING django.request Forbidden (Permission denied): /api/token/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django_ratelimit/decorators.py", line 27, in _wrapped
+    return fn(request, *args, **kw)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django_ratelimit/decorators.py", line 26, in _wrapped
+    raise (import_string(cls) if isinstance(cls, str) else cls)()
+django_ratelimit.exceptions.Ratelimited
+[2025-09-21 11:47:14,861] WARNING django.request Forbidden (Permission denied): /api/token/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django_ratelimit/decorators.py", line 26, in _wrapped
+    raise (import_string(cls) if isinstance(cls, str) else cls)()
+django_ratelimit.exceptions.Ratelimited
+[2025-09-21 11:47:14,935] WARNING django.request Forbidden (Permission denied): /api/token/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django_ratelimit/decorators.py", line 26, in _wrapped
+    raise (import_string(cls) if isinstance(cls, str) else cls)()
+django_ratelimit.exceptions.Ratelimited
+[2025-09-21 11:47:15,029] WARNING django.request Forbidden (Permission denied): /api/token/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django_ratelimit/decorators.py", line 26, in _wrapped
+    raise (import_string(cls) if isinstance(cls, str) else cls)()
+django_ratelimit.exceptions.Ratelimited
+[2025-09-21 11:47:15,110] INFO product_api.auth New user registered: 
+[2025-09-21 11:52:06,086] WARNING django.request Forbidden: /api/products/
+[2025-09-21 11:52:06,235] WARNING django.request Forbidden: /api/products/
+[2025-09-21 11:52:06,491] INFO product_api.auth New user registered: 
+[2025-09-21 11:57:05,201] WARNING django.request Method Not Allowed: /api/products/
+[2025-09-21 11:57:05,600] INFO product_api.auth New user registered: 
+[2025-09-21 12:01:23,555] INFO product_api.auth New user registered: 
+[2025-09-21 12:02:41,617] WARNING django.request Bad Request: /api/products/create/
+[2025-09-21 12:02:42,023] INFO product_api.auth New user registered: 
+[2025-09-21 12:05:36,206] WARNING django.request Bad Request: /api/products/create/
+[2025-09-21 12:05:36,609] INFO product_api.auth New user registered: 
+[2025-09-21 12:08:02,390] WARNING django.request Bad Request: /api/products/create/
+[2025-09-21 12:08:02,780] INFO product_api.auth New user registered: 
+[2025-09-21 12:12:36,760] ERROR django.request Internal Server Error: /api/products/create/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/generics.py", line 194, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 497, in to_internal_value
+    for field in fields:
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 380, in _writable_fields
+    for field in self.fields.values():
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'product_images' was declared on serializer ProductSerializer, but has not been included in the 'fields' option.
+[2025-09-21 12:12:36,914] ERROR django.request Internal Server Error: /api/products/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'product_images' was declared on serializer ProductSerializer, but has not been included in the 'fields' option.
+[2025-09-21 12:12:37,174] INFO product_api.auth New user registered: 
+[2025-09-21 12:14:41,353] ERROR django.request Internal Server Error: /api/products/create/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/generics.py", line 194, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 447, in run_validation
+    value = self.validate(value)
+  File "/Users/Pro/Downloads/alx-project-nexus/product_api/serializer.py", line 100, in validate
+    product = data['product']
+KeyError: 'product'
+[2025-09-21 12:14:41,755] INFO product_api.auth New user registered: 
+[2025-09-21 12:18:01,847] ERROR django.request Internal Server Error: /api/products/create/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Product() got unexpected keyword arguments: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/generics.py", line 194, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/Pro/Downloads/alx-project-nexus/product_api/views.py", line 47, in perform_create
+    serializer.save(user=self.request.user)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1010, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Product.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Product.objects.create()`. You may need to make the field read-only, or override the ProductSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Product() got unexpected keyword arguments: 'user'
+
+[2025-09-21 12:18:02,249] INFO product_api.auth New user registered: 
+[2025-09-21 12:45:53,330] ERROR django.request Internal Server Error: /api/products/create/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: product_api_product.name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/generics.py", line 194, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/Pro/Downloads/alx-project-nexus/product_api/views.py", line 47, in perform_create
+    serializer.save(user_id=self.request.user)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: product_api_product.name
+[2025-09-21 12:45:53,733] INFO product_api.auth New user registered: 
+[2025-09-21 12:49:47,668] ERROR django.request Internal Server Error: /api/products/create/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: product_api_product.name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/generics.py", line 194, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/Pro/Downloads/alx-project-nexus/product_api/views.py", line 47, in perform_create
+    serializer.save(user_id=self.request.user)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: product_api_product.name
+[2025-09-21 12:49:48,326] INFO product_api.auth New user registered: 
+[2025-09-21 12:52:16,116] ERROR django.request Internal Server Error: /api/products/create/
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: product_api_product.name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/generics.py", line 194, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/Pro/Downloads/alx-project-nexus/product_api/views.py", line 47, in perform_create
+    serializer.save(user_id=self.request.user)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/rest_framework/serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/Pro/Downloads/alx-project-nexus/nvenv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: product_api_product.name
+[2025-09-21 12:52:16,766] INFO product_api.auth New user registered: 
+[2025-09-21 12:55:33,805] INFO product_api.auth New user registered: 
+[2025-09-21 12:56:55,533] INFO product_api.auth New user registered: 
+[2025-09-21 13:05:25,496] INFO product_api.auth New user registered: 
+[2025-09-21 13:06:31,199] INFO django.utils.autoreload Watching for file changes with StatReloader

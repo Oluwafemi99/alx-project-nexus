@@ -6,8 +6,8 @@ services:
     buildCommand: |
       pip install -r requirements.txt
       python manage.py collectstatic --noinput
-      python manage.py migrate
     startCommand: gunicorn alx_project_nexus.wsgi:application
+    postDeployCommand: python manage.py migrate --noinput
     envVars:
       - key: SECRET_KEY
         generateValue: true
@@ -24,7 +24,7 @@ services:
           property: connectionString
       - key: CACHE_URL
         fromService:
-          name: alx-project-nexus-cache
+          name: alx-project-nexus-redis
           type: redis
           property: connectionString
 
@@ -36,7 +36,10 @@ services:
     startCommand: celery -A alx_project_nexus worker --loglevel=info
     envVars:
       - key: SECRET_KEY
-        sync: false
+        fromService:
+          name: alx-project-nexus-web
+          type: web
+          property: envVars.SECRET_KEY
       - key: DEBUG
         value: "False"
       - key: DATABASE_URL
@@ -50,7 +53,7 @@ services:
           property: connectionString
       - key: CACHE_URL
         fromService:
-          name: alx-project-nexus-cache
+          name: alx-project-nexus-redis
           type: redis
           property: connectionString
 
@@ -62,7 +65,10 @@ services:
     startCommand: celery -A alx_project_nexus beat --scheduler django_celery_beat.schedulers:DatabaseScheduler --loglevel=info
     envVars:
       - key: SECRET_KEY
-        sync: false
+        fromService:
+          name: alx-project-nexus-web
+          type: web
+          property: envVars.SECRET_KEY
       - key: DEBUG
         value: "False"
       - key: DATABASE_URL
@@ -76,7 +82,7 @@ services:
           property: connectionString
       - key: CACHE_URL
         fromService:
-          name: alx-project-nexus-cache
+          name: alx-project-nexus-redis
           type: redis
           property: connectionString
 
@@ -85,11 +91,7 @@ databases:
     databaseName: nexusdb
     user: nexususer
 
-services:
+# Shared Redis (used for both Celery broker + Django cache)
   - type: redis
     name: alx-project-nexus-redis
-    ipAllowList: []  # private connection
-
-  - type: redis
-    name: alx-project-nexus-cache
     ipAllowList: []  # private connection

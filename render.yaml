@@ -29,6 +29,12 @@ services:
           name: alx-project-nexus-redis
           type: redis
           property: connectionString
+      - key: SUPERUSER_NAME
+        value: admin
+      - key: SUPERUSER_EMAIL
+        value: admin@example.com
+      - key: SUPERUSER_PASSWORD
+        value: 1234
 
   # Celery Worker
   - type: worker

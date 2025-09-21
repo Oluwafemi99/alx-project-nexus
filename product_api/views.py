@@ -51,7 +51,7 @@ class UserDetailViews(generics.RetrieveAPIView):
 
 class UserListView(generics.ListAPIView):
     serializer_class = UserSerializer
-    permission_classes = [permissions.IsAuthenticated]  # Only admins can view all users
+    permission_classes = [permissions.IsAdminUser]  # Only admins can view all users
 
     def get_queryset(self):
         return Users.objects.all()

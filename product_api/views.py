@@ -35,6 +35,7 @@ from django.shortcuts import get_object_or_404
 from rest_framework import status
 from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
+from rest_framework.exceptions import APIException
 
 logger = logging.getLogger(__name__)
 
@@ -46,6 +47,22 @@ class UserDetailViews(generics.RetrieveAPIView):
 
     def get_queryset(self):
         return Users.objects.filter(user_id=self.request.user)
+
+
+class UserListView(generics.ListAPIView):
+    serializer_class = UserSerializer
+    permission_classes = [permissions.IsAdminUser]  # Only admins can view all users
+
+    def get_queryset(self):
+        return Users.objects.all()
+
+    def list(self, request, *args, **kwargs):
+        try:
+            queryset = self.get_queryset()
+            serializer = self.get_serializer(queryset, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Exception as e:
+            raise APIException(detail=f"An error occurred while retrieving users: {str(e)}")
 
 
 class ProductCreateView(generics.CreateAPIView):

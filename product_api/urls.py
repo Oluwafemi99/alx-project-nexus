@@ -12,7 +12,7 @@ from .views import (
     ProductImageListView, verify_payment, GlobalAccountListView,
     DailySalesListView, BlockedIPListView, RequestLogListView,
     SuspiciousIPListView, ReservationCheckoutView, verify_Reserve_payment,
-    RelatedProductViews, UserDetailViews)
+    RelatedProductViews, UserDetailViews, UserListView)
 from .auth import (CustomTokenObtainPairView, CustomTokenRefreshView,
                    LogoutView, RegisterView)
 
@@ -59,7 +59,8 @@ urlpatterns = [
     path('token/refresh/', CustomTokenRefreshView.as_view(), name='token_refresh'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('register/', RegisterView.as_view(), name='register'),
-    path('user/detail/', UserDetailViews.as_view(), name='user-details'),
+    path('api/user/detail/<uuid:user_id>/', UserDetailViews.as_view(), name='User-details'),
+    path('api/users/', UserListView.as_view(), name='user-list'),
 
     # Global Account View
     path('admin/global-accounts/', GlobalAccountListView.as_view(), name='global-account-list'),

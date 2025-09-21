@@ -12,7 +12,7 @@ from .serializer import (
     ReservationSerializer, CategorySerializer, ReviewSerializer,
     OrderItemSerializer, OrderSerializer, AccountSerializer,
     DailySalesSerializer, SupiciousIPSerializer, BlockedIPSerializer,
-    RequestlogSerializer)
+    RequestlogSerializer, UserSerializer)
 from .filters import ProductFilter
 from .pagination import (ProductPagination, ReviewsPagination,
                          CategoryPagination)
@@ -40,6 +40,14 @@ logger = logging.getLogger(__name__)
 
 
 # Product Create Views
+class UserDetailViews(generics.RetrieveAPIView):
+    serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        return Users.objects.filter(user=self.request.user)
+
+
 class ProductCreateView(generics.CreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer

@@ -45,7 +45,7 @@ class UserDetailViews(generics.RetrieveAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        return Users.objects.filter(user=self.request.user)
+        return Users.objects.filter(user_id=self.request.user)
 
 
 class ProductCreateView(generics.CreateAPIView):

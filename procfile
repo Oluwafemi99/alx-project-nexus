@@ -1,0 +1,3 @@
+web: gunicorn alx_project_nexus.wsgi:application
+worker: celery -A alx_project_nexus worker --loglevel=info
+beat: celery -A alx_project_nexus beat --scheduler django_celery_beat.schedulers:DatabaseScheduler --loglevel=info

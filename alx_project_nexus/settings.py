@@ -34,7 +34,7 @@ SECRET_KEY = env("SECRET_KEY", default="unsafe-secret-key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0911b83c8cae.ngrok-free.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -66,6 +66,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'product_api.middleware.RequestLoggingMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'alx_project_nexus.urls'
@@ -92,9 +93,13 @@ WSGI_APPLICATION = 'alx_project_nexus.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": env("POSTGRES_DB"),
+        "USER": env("POSTGRES_USER"),
+        "PASSWORD": env("POSTGRES_PASSWORD"),
+        "HOST": env("POSTGRES_HOST"),
+        "PORT": env("POSTGRES_PORT", default="5432"),
     }
 }
 
@@ -164,17 +169,17 @@ EMAIL_USE_TLS = env('EMAIL_USE_TLS')
 DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL', default=EMAIL_HOST_USER)
 
 # Celery settings
-CELERY_RESULT_BACKEND = "rpc://"
+CELERY_RESULT_BACKEND = env("REDIS_URL")
+CELERY_BROKER_URL = env("REDIS_URL")
+
+"""""
 CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
-
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
-
 CELERY_BROKER_USE_SSL = {
     'cert_reqs': ssl.CERT_NONE  # disables certificate verification (not recommended for production)
 }
-
+"""
 
 CELERY_BEAT_SCHEDULE = {
     'flag-suspicious-ips-hourly': {
@@ -197,14 +202,11 @@ CHAPA_API_URL = "https://api.chapa.co"
 
 
 CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
-    }
+    "default": env.cache("CACHE_URL", backend="django_redis.cache.RedisCache")
 }
+
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = "default"
 
 LOGGING = {
     'version': 1,

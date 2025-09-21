@@ -1,0 +1,95 @@
+services:
+  # Django Web App
+  - type: web
+    name: alx-project-nexus-web
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+      python manage.py migrate
+    startCommand: gunicorn alx_project_nexus.wsgi:application
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: alx-project-nexus-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          name: alx-project-nexus-redis
+          type: redis
+          property: connectionString
+      - key: CACHE_URL
+        fromService:
+          name: alx-project-nexus-cache
+          type: redis
+          property: connectionString
+
+  # Celery Worker
+  - type: worker
+    name: alx-project-nexus-worker
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: celery -A alx_project_nexus worker --loglevel=info
+    envVars:
+      - key: SECRET_KEY
+        sync: false
+      - key: DEBUG
+        value: "False"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: alx-project-nexus-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          name: alx-project-nexus-redis
+          type: redis
+          property: connectionString
+      - key: CACHE_URL
+        fromService:
+          name: alx-project-nexus-cache
+          type: redis
+          property: connectionString
+
+  # Celery Beat (scheduler)
+  - type: worker
+    name: alx-project-nexus-beat
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: celery -A alx_project_nexus beat --scheduler django_celery_beat.schedulers:DatabaseScheduler --loglevel=info
+    envVars:
+      - key: SECRET_KEY
+        sync: false
+      - key: DEBUG
+        value: "False"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: alx-project-nexus-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          name: alx-project-nexus-redis
+          type: redis
+          property: connectionString
+      - key: CACHE_URL
+        fromService:
+          name: alx-project-nexus-cache
+          type: redis
+          property: connectionString
+
+databases:
+  - name: alx-project-nexus-db
+    databaseName: nexusdb
+    user: nexususer
+
+services:
+  - type: redis
+    name: alx-project-nexus-redis
+    ipAllowList: []  # private connection
+
+  - type: redis
+    name: alx-project-nexus-cache
+    ipAllowList: []  # private connection

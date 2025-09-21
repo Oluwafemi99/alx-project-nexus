@@ -165,6 +165,7 @@ DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL', default=EMAIL_HOST_USER)
 # Celery settings
 CELERY_RESULT_BACKEND = env("REDIS_URL")
 CELERY_BROKER_URL = env("REDIS_URL")
+CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 
 """""
 CELERY_ACCEPT_CONTENT = ["json"]
@@ -196,8 +197,15 @@ CHAPA_API_URL = "https://api.chapa.co"
 
 
 CACHES = {
-    "default": env.cache("CACHE_URL", backend="django_redis.cache.RedisCache")
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": env("REDIS_URL"),
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
 }
+
 
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"

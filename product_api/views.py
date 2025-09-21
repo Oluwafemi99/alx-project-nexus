@@ -33,6 +33,8 @@ from decimal import Decimal
 from django.db import transaction
 from django.shortcuts import get_object_or_404
 from rest_framework import status
+from drf_yasg import openapi
+from drf_yasg.utils import swagger_auto_schema
 
 logger = logging.getLogger(__name__)
 
@@ -279,6 +281,24 @@ class WishlistCheckoutView(APIView):
                 {'error': f'Payment initiation failed: {str(e)}'}, status=500)
 
 
+# ✅ Define request body schema
+verify_payment_schema = openapi.Schema(
+    type=openapi.TYPE_OBJECT,
+    properties={
+        'tx_ref': openapi.Schema(
+            type=openapi.TYPE_STRING,
+            description='Transaction reference from Chapa'
+        ),
+    },
+    required=['tx_ref']
+)
+
+
+@swagger_auto_schema(
+    method='post',
+    request_body=verify_payment_schema,
+    responses={200: "Payment verified and order created"}
+)
 @csrf_exempt
 @api_view(['POST'])
 @permission_classes([permissions.AllowAny])
@@ -494,7 +514,24 @@ class ReservationCheckoutView(APIView):
                 {'error': f'Payment initiation failed: {str(e)}'}, status=500)
 
 
-# Verify Reserve payment view
+# ✅ Schema for verify_Reserve_payment
+verify_reserve_schema = openapi.Schema(
+    type=openapi.TYPE_OBJECT,
+    properties={
+        'tx_ref': openapi.Schema(
+            type=openapi.TYPE_STRING,
+            description='Transaction reference from Chapa'
+        ),
+    },
+    required=['tx_ref']
+)
+
+
+@swagger_auto_schema(
+    method='post',
+    request_body=verify_reserve_schema,
+    responses={200: "Reserve payment verified and order created"}
+)
 @csrf_exempt
 @api_view(['POST'])
 @permission_classes([permissions.AllowAny])

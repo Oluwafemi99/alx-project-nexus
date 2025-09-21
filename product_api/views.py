@@ -143,7 +143,7 @@ class ReviewsListView(generics.ListAPIView):
     permission_classes = [permissions.AllowAny]
     pagination_class = ReviewsPagination
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['product']  # Enables ?product=UUID filtering
+    filterset_fields = ['product_id']  # Enables ?product=UUID filtering
 
 
 # Order Views

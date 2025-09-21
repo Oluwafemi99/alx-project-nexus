@@ -131,7 +131,8 @@ class ReviewSerializer(serializers.ModelSerializer):
                   'user_id',
                   'comment',
                   'ratings',
-                  'created_at']
+                  'created_at',
+                  ]
 
 
 class WishlistSerializer(serializers.ModelSerializer):

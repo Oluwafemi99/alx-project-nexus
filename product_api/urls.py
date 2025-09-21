@@ -59,8 +59,8 @@ urlpatterns = [
     path('token/refresh/', CustomTokenRefreshView.as_view(), name='token_refresh'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('register/', RegisterView.as_view(), name='register'),
-    path('api/user/detail/<uuid:user_id>/', UserDetailViews.as_view(), name='User-details'),
-    path('api/users/', UserListView.as_view(), name='user-list'),
+    path('user/detail/<uuid:user_id>/', UserDetailViews.as_view(), name='User-details'),
+    path('users/', UserListView.as_view(), name='user-list'),
 
     # Global Account View
     path('admin/global-accounts/', GlobalAccountListView.as_view(), name='global-account-list'),

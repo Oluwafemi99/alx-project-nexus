@@ -6,10 +6,10 @@ services:
     buildCommand: |
       pip install -r requirements.txt
       python manage.py collectstatic --noinput
-    startCommand: python manage.py create_default_superuser && gunicorn alx_project_nexus.wsgi:application
+    startCommand: gunicorn alx_project_nexus.wsgi:application
     postDeployCommand: |
       python manage.py migrate --noinput
-      python manage.py create_default_superuser
+      python manage.py createsuperuser --noinput
     envVars:
       - key: SECRET_KEY
         generateValue: true
@@ -29,11 +29,13 @@ services:
           name: alx-project-nexus-redis
           type: redis
           property: connectionString
-      - key: SUPERUSER_NAME
+
+      # Correct superuser env vars (Django expects these exact names)
+      - key: DJANGO_SUPERUSER_USERNAME
         value: admin
-      - key: SUPERUSER_EMAIL
+      - key: DJANGO_SUPERUSER_EMAIL
         value: admin@example.com
-      - key: SUPERUSER_PASSWORD
+      - key: DJANGO_SUPERUSER_PASSWORD
         value: 1234
 
   # Celery Worker

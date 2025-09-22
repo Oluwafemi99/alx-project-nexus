@@ -73,5 +73,4 @@ urlpatterns = [
 
     # Related Product View
     path("products/<uuid:pk>/related/", RelatedProductViews.as_view(), name="related-products"),
-    path("create-admin/", create_admin_user, name="create_admin_user"),
 ]

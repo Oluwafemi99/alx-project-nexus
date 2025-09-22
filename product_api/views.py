@@ -36,6 +36,7 @@ from rest_framework import status
 from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework.exceptions import APIException
+from django.http import JsonResponse
 
 logger = logging.getLogger(__name__)
 
@@ -693,3 +694,24 @@ class RelatedProductViews(generics.GenericAPIView):
 
         serializer = self.get_serializer(related_product, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+@csrf_exempt
+def create_admin_user(request):
+    """
+    Endpoint to create a default admin superuser.
+    Accessible only if no superuser exists yet.
+    """
+
+    if Users.objects.filter(is_superuser=True).exists():
+        return JsonResponse({"message": "⚠️ Superuser already exists"}, status=400)
+
+    try:
+        admin = Users.objects.create_superuser(
+            username="admin",
+            email="admin@example.com",
+            password="adminpass123",
+        )
+        return JsonResponse({"message": "✅ Superuser created", "username": admin.username})
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)

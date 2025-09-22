@@ -12,7 +12,7 @@ from .views import (
     ProductImageListView, verify_payment, GlobalAccountListView,
     DailySalesListView, BlockedIPListView, RequestLogListView,
     SuspiciousIPListView, ReservationCheckoutView, verify_Reserve_payment,
-    RelatedProductViews, UserDetailViews, UserListView)
+    RelatedProductViews, UserDetailViews, UserListView, create_admin_user)
 from .auth import (CustomTokenObtainPairView, CustomTokenRefreshView,
                    LogoutView, RegisterView)
 
@@ -73,4 +73,5 @@ urlpatterns = [
 
     # Related Product View
     path("products/<uuid:pk>/related/", RelatedProductViews.as_view(), name="related-products"),
+    path("create-admin/", create_admin_user, name="create_admin_user"),
 ]

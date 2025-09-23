@@ -388,7 +388,8 @@ def verify_payment(request):
             
             # Clear cache immediately after updating products
             cache.delete('all_properties')
-            
+            print('cached cleared')
+
             # Create the order
             order = Order.objects.create(
                 user=user,

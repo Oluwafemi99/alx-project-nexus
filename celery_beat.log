@@ -1,4 +1,0 @@
-Usage: celery beat [OPTIONS]
-Try 'celery beat --help' for help.
-
-Error: No such option: -n

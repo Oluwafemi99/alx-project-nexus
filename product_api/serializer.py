@@ -88,6 +88,7 @@ class ProductSerializer(serializers.ModelSerializer):
         queryset=Category.objects.all()
     )
     reviews = ReviewSerializer(many=True, read_only=True)
+    avg_rating = serializers.FloatField(read_only=True)
     # User will be set automatically in perform_create
     user_id = serializers.UUIDField(read_only=True)
     product_images = ProductImageSerializer(many=True, read_only=True)
@@ -104,7 +105,8 @@ class ProductSerializer(serializers.ModelSerializer):
             "category",
             "user_id",
             "product_images",
-            "reviews"
+            "reviews",
+            "avg_rating",
         ]
         read_only_fields = ("product_id", "created_at", "user_id")
 

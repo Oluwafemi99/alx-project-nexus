@@ -2,13 +2,15 @@ from .models import Product
 from django.core.cache import cache
 import logging
 from django_redis import get_redis_connection
+from django.db.models import Avg
 
 
 # Caching All products View at Low level
 def get_all_products():
     products = cache.get('all_products')
     if products is None:
-        products = Product.objects.all().prefetch_related('reviews__user_id')
+        products = Product.objects.prefetch_related(
+            'reviews__user_id').annotate(avg_rating=Avg('reviews__ratings'))
         cache.set('all_products', products, timeout=3600)
     return products
 

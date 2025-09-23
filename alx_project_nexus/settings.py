@@ -252,8 +252,8 @@ LOGGING = {
 
 
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(hours=12),   # just for testing... 30mins is ideal
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=30),   # one day is ideal
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
     "ROTATE_REFRESH_TOKENS": False,
     "BLACKLIST_AFTER_ROTATION": True,
     "USER_ID_FIELD": "user_id",   # PK field

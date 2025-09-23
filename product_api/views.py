@@ -639,6 +639,14 @@ def verify_Reserve_payment(request):
                 total_amount=amount,
                 created_at=timezone.now()
             )
+            # create Transation
+            Transaction.objects.create(
+                user=user,
+                tx_ref=tx_ref,
+                amount=amount,
+                status=result.get("status", "unknown")
+
+            )
 
             # Create order items
             for item in reserve_items:

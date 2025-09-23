@@ -1,3 +1,102 @@
+# ALX Project Nexus — E-commerce Backend Platform
+
+**ALX Project Nexus** is a robust, scalable e-commerce backend built with Django and Django REST Framework. Designed as part of the ALX Software Engineering program, this project powers core functionalities for online retail platforms — from user authentication and product management to order processing and asynchronous task handling.
+
+---
+
+## What is Project Nexus?
+
+Project Nexus is the engine behind a modern e-commerce experience. It provides:
+
+**User Authentication & Profiles** — Secure login with JWT, user roles, and profile management
+**Product Catalog API** — Create, update, and browse products with categories and inventory tracking
+**Order Management** — Place orders, track status, and manage payments
+**Email Notifications** — Send order confirmations and alerts via Celery tasks
+**Scheduled Jobs** — Auto-clear abandoned carts, send promotional emails, and sync inventory
+**RESTful API** — Clean endpoints for frontend integration (React, Vue, mobile apps)
+**Swagger/OpenAPI** — Interactive API docs for developers
+**Cloud Deployment** — Hosted on Render with PostgreSQL and Redis
+
+---
+
+## Tech Stack
+
+| Layer         | Technology                     |
+|---------------|--------------------------------|
+| Backend       | Django 4.2, Django REST Framework |
+| Auth          | JWT via `djangorestframework-simplejwt` |
+| Task Queue    | Celery                         |
+| Scheduler     | Celery Beat + `django-celery-beat` |
+| Cache/Broker  | Redis                          |
+| Database      | PostgreSQL                     |
+| Deployment    | Render                         |
+| Docs          | Swagger (via `drf-yasg`)       |
+
+---
+
+## 🛒 Core Features
+
+- **User Registration & Login**
+- **Product Listings & Categories**
+- **Cart & Checkout APIs**
+- **Order History & Status Tracking**
+- **Admin Dashboard (via Django Admin)**
+- **Background Tasks for Email & Inventory**
+- **Secure Token-based Authentication**
+
+---
+
+## 🚦 API Endpoints
+
+| Method | Endpoint                  | Description                  |
+|--------|---------------------------|------------------------------|
+| POST   | `/api/token/`             | Obtain JWT token             |
+| GET    | `/api/products/`          | List all products            |
+| POST   | `/api/orders/`            | Place a new order            |
+| GET    | `/api/user/detail/<uuid>/`| Retrieve user details        |
+
+> Full API documentation available at `/swagger/` once deployed.
+
+---
+
+## 🧪 Running Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/alx-project-nexus.git
+cd alx-project-nexus
+
+# Create virtual environment
+python -m venv .venv
+source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run migrations
+python manage.py migrate
+
+# Start server
+python manage.py runserver
+
+
+Deployment on Render
+
+Render uses render.yaml to configure services:
+
+Web Service: Django + Gunicorn
+
+Worker Service: Celery
+
+Beat Service: Celery Beat
+
+Redis: Broker and cache
+
+PostgreSQL: Database
+
+Author: Oluwafemi Dojumo  ALX Software Engineering Program Lagos, Nigeria
+
+
 ## Key Technologies Covered
 
 1. Python

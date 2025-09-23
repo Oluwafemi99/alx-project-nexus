@@ -74,11 +74,20 @@ class ProductImageSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class ReviewSerializer(serializers.ModelSerializer):
+    user = serializers.StringRelatedField(source='user_id')  # or include username/email
+
+    class Meta:
+        model = Reviews
+        fields = ['reviews_id', 'user', 'comment', 'ratings', 'created_at']
+
+
 class ProductSerializer(serializers.ModelSerializer):
     # Accept UUID instead of full object
     category = serializers.PrimaryKeyRelatedField(
         queryset=Category.objects.all()
     )
+    reviews = ReviewSerializer(many=True, read_only=True)
     # User will be set automatically in perform_create
     user_id = serializers.UUIDField(read_only=True)
     product_images = ProductImageSerializer(many=True, read_only=True)
@@ -94,7 +103,8 @@ class ProductSerializer(serializers.ModelSerializer):
             "image_url",
             "category",
             "user_id",
-            "product_images"
+            "product_images",
+            "reviews"
         ]
         read_only_fields = ("product_id", "created_at", "user_id")
 
@@ -121,19 +131,6 @@ class ProductSerializer(serializers.ModelSerializer):
         if value > max_bytes_size:
             raise serializers.ValidationError('Image size too Large')
         return value
-
-
-class ReviewSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Reviews
-        fields = ['reviews_id',
-                  'product_id',
-                  'user_id',
-                  'comment',
-                  'ratings',
-                  'created_at',
-                  ]
 
 
 class WishlistSerializer(serializers.ModelSerializer):

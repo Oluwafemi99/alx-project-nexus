@@ -8,7 +8,7 @@ from django_redis import get_redis_connection
 def get_all_products():
     products = cache.get('all_products')
     if products is None:
-        products = Product.objects.all()
+        products = Product.objects.all().prefetch_related('reviews__user_id')
         cache.set('all_products', products, timeout=3600)
     return products
 

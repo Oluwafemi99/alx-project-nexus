@@ -84,9 +84,7 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 class ProductSerializer(serializers.ModelSerializer):
     # Accept UUID instead of full object
-    category = serializers.PrimaryKeyRelatedField(
-        queryset=Category.objects.all()
-    )
+    category = serializers.StringRelatedField()
     reviews = ReviewSerializer(many=True, read_only=True)
     avg_rating = serializers.FloatField(read_only=True)
     # User will be set automatically in perform_create
@@ -138,12 +136,12 @@ class ProductSerializer(serializers.ModelSerializer):
 class WishlistSerializer(serializers.ModelSerializer):
     product = serializers.StringRelatedField()
     user = serializers.StringRelatedField()
-    product_images = ProductImageSerializer(many=True, read_only=True)
+    images = ProductImageSerializer(many=True, read_only=True)
 
     class Meta:
         model = Wishlist
         fields = ['wishlist_id', 'user', 'product',
-                  'added_at', 'quantity', 'product_images']
+                  'added_at', 'quantity', 'images']
         read_only_fields = ['user', 'added_at']
 
     def validate_product(self, value):

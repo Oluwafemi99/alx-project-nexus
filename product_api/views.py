@@ -387,8 +387,8 @@ def verify_payment(request):
                 print(f"Stock reduced: {product.name} now {product.stock_quantity} quantity's")
             
             # Clear cache immediately after updating products
-            cache.delete('all_properties')
-            print('cached cleared')
+                cache.delete('all_properties')
+                print('cached cleared')
 
             # Create the order
             order = Order.objects.create(
@@ -632,8 +632,8 @@ def verify_Reserve_payment(request):
                 product.save()
                 print(f"Stock reduced: {product.name} now {product.stock_quantity} quantity's")
 
-            # Clear cache immediately after updating products
-            cache.delete('all_properties')
+                # Clear cache immediately after updating products
+                cache.delete('all_properties')
 
             # Create the order
             order = Order.objects.create(

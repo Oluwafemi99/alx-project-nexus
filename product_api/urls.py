@@ -12,7 +12,7 @@ from .views import (
     ProductImageListView, verify_payment, GlobalAccountListView,
     DailySalesListView, BlockedIPListView, RequestLogListView,
     SuspiciousIPListView, ReservationCheckoutView, verify_Reserve_payment,
-    RelatedProductViews, UserDetailViews, UserListView, create_admin_user)
+    RelatedProductViews, UserDetailViews, UserListView)
 from .auth import (CustomTokenObtainPairView, CustomTokenRefreshView,
                    LogoutView, RegisterView)
 

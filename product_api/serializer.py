@@ -161,10 +161,14 @@ class WishlistSerializer(serializers.ModelSerializer):
 
 
 class ReservationSerializer(serializers.ModelSerializer):
+    product = serializers.StringRelatedField()
+    user = serializers.StringRelatedField()
+    images = ProductImageSerializer(many=True, read_only=True)
+
     class Meta:
         model = Reservation
         fields = ['reservation_id', 'user',
-                  'product', 'quantity', 'reserved_at']
+                  'product', 'quantity', 'reserved_at', 'images']
         read_only_fields = ['user', 'reserved_at']
 
     def create(self, validated_data):

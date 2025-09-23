@@ -5,7 +5,8 @@ from rest_framework_simplejwt.exceptions import InvalidToken, TokenError
 from .models import (Product, Reviews, ProductImage,
                      Category, Wishlist, Reservation,
                      OrderItem, Order, Account, DailySales,
-                     RequestLog, BlockedIP, SuspiciousIP)
+                     RequestLog, BlockedIP, SuspiciousIP,
+                     Transaction)
 from PIL import Image
 from rest_framework_simplejwt.serializers import (TokenObtainPairSerializer,
                                                   TokenRefreshSerializer)
@@ -248,3 +249,11 @@ class SupiciousIPSerializer(serializers.ModelSerializer):
     class Meta:
         model = SuspiciousIP
         fields = "__all__"
+
+
+class TransactionSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Transaction
+        fields = ['tx_ref', 'user', 'amount', 'created_at', 'status']
+        read_only_fields = ['status']

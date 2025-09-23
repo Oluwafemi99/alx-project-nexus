@@ -6,16 +6,17 @@ from django.core.exceptions import PermissionDenied
 from .models import (Product, ProductImage, Reviews,
                      Reservation, Wishlist, Category,
                      Order, OrderItem, Users, Account,
-                     DailySales, BlockedIP, RequestLog, SuspiciousIP)
+                     DailySales, BlockedIP, RequestLog, SuspiciousIP,
+                     Transaction)
 from .serializer import (
     ProductSerializer, ProductImageSerializer, WishlistSerializer,
     ReservationSerializer, CategorySerializer, ReviewSerializer,
     OrderItemSerializer, OrderSerializer, AccountSerializer,
     DailySalesSerializer, SupiciousIPSerializer, BlockedIPSerializer,
-    RequestlogSerializer, UserSerializer)
+    RequestlogSerializer, UserSerializer, TransactionSerializer)
 from .filters import ProductFilter
 from .pagination import (ProductPagination, ReviewsPagination,
-                         CategoryPagination)
+                         CategoryPagination, TransactionPagination)
 from django.utils import timezone
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
@@ -181,6 +182,15 @@ class OrderListCreateView(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+
+
+class TransactionListView(generics.ListAPIView):
+    serializer_class = TransactionSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    pagination_class = TransactionPagination
+
+    def get_queryset(self):
+        return Transaction.objects.filter(user=self.request.user)
 
 
 class OrderDetailView(generics.RetrieveUpdateDestroyAPIView):
@@ -386,6 +396,14 @@ def verify_payment(request):
                 tx_ref=tx_ref,
                 total_amount=amount,
                 created_at=timezone.now()
+            )
+            # create the Transaction
+            Transaction.objects.create(
+                user=user,
+                tx_ref=tx_ref,
+                amount=amount,
+                status=result.get("status", "unknown")
+
             )
 
             # Create order items

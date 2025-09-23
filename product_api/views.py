@@ -78,7 +78,7 @@ class ProductCreateView(generics.CreateAPIView):
 
 # product List View
 @method_decorator(csrf_exempt, name='dispatch')
-@method_decorator(cache_page(60 * 15), name='dispatch')
+# @method_decorator(cache_page(60 * 15), name='dispatch')
 class ProductListView(generics.ListAPIView):
     serializer_class = ProductSerializer
     pagination_class = ProductPagination

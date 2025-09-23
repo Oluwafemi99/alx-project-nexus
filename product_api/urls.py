@@ -7,8 +7,8 @@ from .views import (
     ProductUpdateView, ProductDeleteView, ProductImageUploadView,
     CategoryView, ReviewsCreateView, ReviewsListView,
     WishlistListCreateView, WishlistDeleteView,
-    WishlistCheckoutView, OrderListCreateView, OrderItemDetailView,
-    OrderDetailView, OrderItemListCreateView, ReservationViewSet,
+    WishlistCheckoutView, OrderListCreateView,
+    OrderDetailView, ReservationViewSet, OrderItemViewSet,
     ProductImageListView, verify_payment, GlobalAccountListView,
     DailySalesListView, BlockedIPListView, RequestLogListView,
     SuspiciousIPListView, ReservationCheckoutView, verify_Reserve_payment,
@@ -19,6 +19,7 @@ from .auth import (CustomTokenObtainPairView, CustomTokenRefreshView,
 router = DefaultRouter()
 router.register(r'categories', CategoryView, basename='category')
 router.register(r'reservations', ReservationViewSet, basename='reservation')
+router.register(r'orderitems', OrderItemViewSet, basename='orderitems')
 
 urlpatterns = [
     # Product URLs
@@ -31,7 +32,7 @@ urlpatterns = [
     path('products/image/upload/', ProductImageUploadView.as_view(), name='product-image-upload'),
     path('Product/image/', ProductImageListView.as_view(), name='get-all-images'),
 
-    # Reservation and Category URLs (via router)
+    # Reservation, Category, OrderItems URLs (via router)
     path('', include(router.urls)),
 
     # Review URLs
@@ -51,8 +52,6 @@ urlpatterns = [
     # Order and OrderItems Urls
     path('orders/', OrderListCreateView.as_view(), name='order-list-create'),
     path('orders/<uuid:pk>/', OrderDetailView.as_view(), name='order-detail'),
-    path('order-items/', OrderItemListCreateView.as_view(), name='orderitem-list-create'),
-    path('order-items/<int:pk>/', OrderItemDetailView.as_view(), name='orderitem-detail'),
 
     # Auth Urls
     path('token/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),

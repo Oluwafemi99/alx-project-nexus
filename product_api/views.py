@@ -201,20 +201,15 @@ class OrderDetailView(generics.RetrieveUpdateDestroyAPIView):
         return Order.objects.filter(user=self.request.user)
 
 
-class OrderItemListCreateView(generics.ListCreateAPIView):
+class OrderItemViewSet(viewsets.ModelViewSet):
     serializer_class = OrderItemSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        return OrderItem.objects.filter(order__user=self.request.user)
-
-
-class OrderItemDetailView(generics.RetrieveUpdateDestroyAPIView):
-    serializer_class = OrderItemSerializer
-    permission_classes = [IsAuthenticated]
-
-    def get_queryset(self):
-        return OrderItem.objects.filter(order__user=self.request.user)
+        user = self.request.user
+        if not user.is_authenticated:
+            return OrderItem.objects.none()
+        return OrderItem.objects.filter(order__user=user)
 
 
 # wishlist Views

@@ -37,6 +37,7 @@ from rest_framework import status
 from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework.exceptions import APIException
+from django.core.cache import cache
 
 logger = logging.getLogger(__name__)
 
@@ -384,7 +385,10 @@ def verify_payment(request):
                 product.stock_quantity -= item.quantity
                 product.save()
                 print(f"Stock reduced: {product.name} now {product.stock_quantity} quantity's")
-
+            
+            # Clear cache immediately after updating products
+            cache.delete('all_properties')
+            
             # Create the order
             order = Order.objects.create(
                 user=user,
@@ -626,6 +630,9 @@ def verify_Reserve_payment(request):
                 product.stock_quantity -= item.quantity
                 product.save()
                 print(f"Stock reduced: {product.name} now {product.stock_quantity} quantity's")
+
+            # Clear cache immediately after updating products
+            cache.delete('all_properties')
 
             # Create the order
             order = Order.objects.create(

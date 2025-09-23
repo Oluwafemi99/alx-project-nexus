@@ -138,11 +138,12 @@ class ProductSerializer(serializers.ModelSerializer):
 class WishlistSerializer(serializers.ModelSerializer):
     product = serializers.StringRelatedField()
     user = serializers.StringRelatedField()
+    product_images = ProductImageSerializer(many=True, read_only=True)
 
     class Meta:
         model = Wishlist
         fields = ['wishlist_id', 'user', 'product',
-                  'added_at', 'quantity']
+                  'added_at', 'quantity', 'product_images']
         read_only_fields = ['user', 'added_at']
 
     def validate_product(self, value):

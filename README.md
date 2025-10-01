@@ -131,6 +131,7 @@ Author: Oluwafemi Dojumo  ALX Software Engineering Program Lagos, Nigeria
 
 1. Database Design
 - Learned about normalization and relationships like one-to-many and many-to-many.
+
 - Applied indexing to improve performance.
 
 2. Asynchronous Programming

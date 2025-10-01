@@ -46,14 +46,13 @@ logger = logging.getLogger(__name__)
 class UserDetailViews(generics.RetrieveAPIView):
     serializer_class = UserSerializer
     permission_classes = [permissions.IsAuthenticated]
-
-    def get_queryset(self):
-        return Users.objects.filter(user_id=self.request.user)
+    queryset = Users.objects.all()
+    lookup_field = "user_id"
 
 
 class UserListView(generics.ListAPIView):
     serializer_class = UserSerializer
-    permission_classes = [permissions.IsAdminUser]  # Only admins can view all users
+    permission_classes = [permissions.IsAdminUser]
 
     def get_queryset(self):
         return Users.objects.all()

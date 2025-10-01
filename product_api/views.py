@@ -1,5 +1,3 @@
-# product_api/views.py
-
 from rest_framework import generics, viewsets, permissions, parsers, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from django.core.exceptions import PermissionDenied

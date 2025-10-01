@@ -256,6 +256,7 @@ class SupiciousIPSerializer(serializers.ModelSerializer):
 
 
 class TransactionSerializer(serializers.ModelSerializer):
+    user = serializers.StringRelatedField()
 
     class Meta:
         model = Transaction
